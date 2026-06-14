@@ -25,7 +25,7 @@ export const Route = createFileRoute("/services")({
 
 const services = [
   {
-    icon: Compass, n: "01",
+    icon: Compass, n: "01", slug: "strategic-planning",
     title: "Strategic Planning & Institutional Development",
     body: "We design strategic frameworks and institutional systems that allow organisations to perform, adapt, and deliver — at scale, under pressure, and with integrity.",
     points: [
@@ -36,7 +36,7 @@ const services = [
     ],
   },
   {
-    icon: ShieldAlert, n: "02",
+    icon: ShieldAlert, n: "02", slug: "crisis-leadership",
     title: "Crisis Leadership Advisory & Capacity Building",
     body: "DBA-level expertise in crisis leadership for fragile and conflict-affected settings, grounded in original peer-reviewed research from South Sudan.",
     points: [
@@ -47,7 +47,7 @@ const services = [
     ],
   },
   {
-    icon: Users, n: "03",
+    icon: Users, n: "03", slug: "executive-leadership-development",
     title: "Executive Leadership Development & Coaching",
     body: "One-to-one coaching and cohort programmes that build leaders capable of delivering with integrity in complex political and operational environments.",
     points: [
@@ -58,7 +58,7 @@ const services = [
     ],
   },
   {
-    icon: Landmark, n: "04",
+    icon: Landmark, n: "04", slug: "governance-and-accountability",
     title: "Governance, Accountability & Public Sector Reform",
     body: "Advisory to governments, oversight institutions, and development partners on governance reform, accountability systems, and public-sector performance.",
     points: [
@@ -69,7 +69,7 @@ const services = [
     ],
   },
   {
-    icon: FileSearch, n: "05",
+    icon: FileSearch, n: "05", slug: "research-and-policy",
     title: "Research, Policy Analysis & Advisory",
     body: "High-quality policy research, institutional analyses, and strategic advisory for governments, multilaterals, NGOs, and academic institutions.",
     points: [
@@ -80,7 +80,7 @@ const services = [
     ],
   },
   {
-    icon: GraduationCap, n: "06",
+    icon: GraduationCap, n: "06", slug: "training-and-facilitation",
     title: "Training, Facilitation & Workshop Design",
     body: "Custom training programmes and facilitated workshops designed to build internal capacity rather than create consultant dependency.",
     points: [
@@ -162,6 +162,13 @@ function ServicesPage() {
                   </div>
                   <div className="md:col-span-5">
                     <p className={dark ? "text-cloud/80" : "text-muted-foreground"}>{s.body}</p>
+                    <Link
+                      to="/services/$slug"
+                      params={{ slug: s.slug }}
+                      className={`mt-5 inline-flex items-center gap-1 text-sm font-medium ${dark ? "text-[color:var(--gold)]" : "text-foreground"}`}
+                    >
+                      Full detail <ArrowUpRight className="h-4 w-4" />
+                    </Link>
                   </div>
                   <ul className={`md:col-span-4 space-y-3 text-sm ${dark ? "text-cloud/85" : "text-foreground/85"}`}>
                     {s.points.map((p) => (

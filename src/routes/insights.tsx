@@ -2,7 +2,8 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { useServerFn } from "@tanstack/react-start";
 import { subscribeNewsletter } from "@/lib/leads.functions";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Download } from "lucide-react";
+import { ARTICLES } from "@/lib/content";
 
 export const Route = createFileRoute("/insights")({
   head: () => ({
@@ -16,40 +17,10 @@ export const Route = createFileRoute("/insights")({
   component: InsightsPage,
 });
 
-const posts = [
-  {
-    tag: "Crisis Leadership",
-    date: "May 2026",
-    title: "Why crisis leadership fails in fragile states — and what the evidence says works.",
-    excerpt: "Drawing on doctoral research in South Sudan: the institutional, behavioural, and design conditions that separate resilient public institutions from those that collapse under pressure.",
-    read: "9 min read",
-  },
-  {
-    tag: "Governance",
-    date: "Apr 2026",
-    title: "Five governance signals every oversight institution should track.",
-    excerpt: "Accountability isn't an annual audit. The early indicators of institutional drift that good oversight bodies monitor monthly.",
-    read: "6 min read",
-  },
-  {
-    tag: "Public Sector Reform",
-    date: "Mar 2026",
-    title: "Why reform programmes stall at the implementation gap — and how to close it.",
-    excerpt: "Most public-sector reform plans are sound on paper. The execution failures cluster in five predictable places.",
-    read: "8 min read",
-  },
-  {
-    tag: "Leadership Development",
-    date: "Feb 2026",
-    title: "Designing executive coaching for political and institutional environments.",
-    excerpt: "Coaching frameworks built for corporates rarely survive contact with ministerial reality. What we adapt — and what we throw out.",
-    read: "5 min read",
-  },
-];
-
 function InsightsPage() {
   const subscribe = useServerFn(subscribeNewsletter);
   const [state, setState] = useState<"idle" | "sending" | "ok" | "error">("idle");
+
   return (
     <>
       <section className="border-b border-border bg-background py-24">
@@ -71,12 +42,21 @@ function InsightsPage() {
           <div className="md:col-span-8">
             <p className="eyebrow text-[color:var(--gold)]">/ Free briefing</p>
             <h2 className="mt-3 font-display text-2xl md:text-3xl">
-              The KSL crisis-leadership diagnostic — a five-page institutional self-assessment.
+              The KSL Crisis Leadership Framework — a practitioner's guide.
             </h2>
             <p className="mt-2 max-w-2xl text-sm text-muted-foreground">
-              The same opening diagnostic we run with senior leadership teams — distilled
-              into a PDF you can use this week.
+              The four-pillar framework we use with senior leadership teams in fragile
+              contexts — distilled into a PDF you can use this week.
             </p>
+            {state === "ok" && (
+              <a
+                href="/ksl-crisis-leadership-framework.pdf"
+                download
+                className="mt-4 inline-flex items-center gap-2 rounded-sm bg-[color:var(--ink)] px-5 py-3 text-sm font-semibold text-[color:var(--gold)] hover:bg-[color:var(--gold)] hover:text-[color:var(--ink)]"
+              >
+                <Download className="h-4 w-4" /> Download the PDF
+              </a>
+            )}
           </div>
           <form
             className="md:col-span-4 flex gap-2"
@@ -112,17 +92,29 @@ function InsightsPage() {
       {/* POSTS */}
       <section className="py-20">
         <div className="container-tight divide-y divide-border border-y border-border">
-          {posts.map((p) => (
-            <article key={p.title} className="grid gap-6 py-10 md:grid-cols-12 md:gap-10">
+          {ARTICLES.map((p) => (
+            <article key={p.slug} className="grid gap-6 py-10 md:grid-cols-12 md:gap-10">
               <div className="md:col-span-3">
-                <p className="eyebrow text-[color:var(--gold)]">{p.tag}</p>
-                <p className="mt-2 text-sm text-muted-foreground">{p.date} · {p.read}</p>
+                <p className="eyebrow text-[color:var(--gold)]">{p.category}</p>
+                <p className="mt-2 text-sm text-muted-foreground">{p.date} · {p.readTime}</p>
               </div>
               <div className="md:col-span-9">
-                <h2 className="font-display text-2xl md:text-3xl leading-snug">{p.title}</h2>
-                <p className="mt-3 max-w-2xl text-base text-muted-foreground">{p.excerpt}</p>
-                <Link to="/contact" className="mt-5 inline-flex items-center gap-1 text-sm font-medium text-foreground">
-                  Request the full piece <ArrowUpRight className="h-4 w-4" />
+                <h2 className="font-display text-2xl md:text-3xl leading-snug">
+                  <Link
+                    to="/insights/$slug"
+                    params={{ slug: p.slug }}
+                    className="hover:text-[color:var(--gold)]"
+                  >
+                    {p.title}
+                  </Link>
+                </h2>
+                <p className="mt-3 max-w-2xl text-base text-muted-foreground">{p.dek}</p>
+                <Link
+                  to="/insights/$slug"
+                  params={{ slug: p.slug }}
+                  className="mt-5 inline-flex items-center gap-1 text-sm font-medium text-foreground"
+                >
+                  Read the article <ArrowUpRight className="h-4 w-4" />
                 </Link>
               </div>
             </article>
