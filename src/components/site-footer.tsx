@@ -1,20 +1,37 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
+import { useServerFn } from "@tanstack/react-start";
+import { subscribeNewsletter } from "@/lib/leads.functions";
 
 export function SiteFooter() {
-  const [sent, setSent] = useState(false);
+  const subscribe = useServerFn(subscribeNewsletter);
+  const [state, setState] = useState<"idle" | "sending" | "ok" | "error">("idle");
+
+  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setState("sending");
+    const fd = new FormData(e.currentTarget);
+    const email = String(fd.get("email") ?? "");
+    try {
+      const res = await subscribe({ data: { email, source: "footer" } });
+      setState(res.ok ? "ok" : "error");
+      if (res.ok) (e.target as HTMLFormElement).reset();
+    } catch {
+      setState("error");
+    }
+  }
 
   return (
     <footer className="mt-24 bg-[color:var(--ink)] text-cloud">
       <div className="container-tight grid gap-12 py-16 md:grid-cols-[1.5fr_1fr_1fr_1.2fr]">
         <div>
-          <div className="flex items-center gap-2 font-display text-lg font-semibold">
-            <span className="inline-block h-2.5 w-2.5 rotate-45 bg-accent" aria-hidden />
+          <div className="flex items-center gap-2 font-display text-lg">
+            <span className="inline-block h-2.5 w-2.5 rotate-45 bg-[color:var(--steel)]" aria-hidden />
             Meridian Consulting
           </div>
           <p className="mt-4 max-w-sm text-sm text-cloud/70">
-            Project management and construction consultancy delivering complex builds on time, on
-            budget, and to specification.
+            Independent project, procurement, and construction management consultancy delivering
+            complex builds across East Africa.
           </p>
         </div>
 
@@ -42,17 +59,24 @@ export function SiteFooter() {
         <div>
           <p className="eyebrow text-cloud/50">Newsletter</p>
           <p className="mt-4 text-sm text-cloud/70">Monthly field notes on cost, schedule, and recovery. No spam.</p>
-          <form className="mt-4 flex gap-2" onSubmit={(e) => { e.preventDefault(); setSent(true); }}>
+          <form className="mt-4 flex gap-2" onSubmit={onSubmit}>
             <input
               type="email"
+              name="email"
               required
+              maxLength={255}
               placeholder="you@company.com"
-              className="min-w-0 flex-1 rounded-sm border border-white/15 bg-white/5 px-3 py-2 text-sm text-cloud placeholder:text-cloud/40 focus:border-accent focus:outline-none"
+              className="min-w-0 flex-1 rounded-sm border border-white/15 bg-white/5 px-3 py-2 text-sm text-cloud placeholder:text-cloud/40 focus:border-[color:var(--steel)] focus:outline-none"
             />
-            <button type="submit" className="rounded-sm bg-accent px-4 py-2 text-sm font-medium text-[color:var(--ink)] hover:bg-cloud">
-              {sent ? "Subscribed" : "Join"}
+            <button
+              type="submit"
+              disabled={state === "sending"}
+              className="rounded-sm bg-[color:var(--steel)] px-4 py-2 text-sm font-medium text-cloud hover:bg-cloud hover:text-[color:var(--ink)] disabled:opacity-60"
+            >
+              {state === "ok" ? "Done" : state === "sending" ? "…" : "Join"}
             </button>
           </form>
+          {state === "error" && <p className="mt-2 text-xs text-destructive">Could not subscribe. Try again.</p>}
         </div>
       </div>
 
