@@ -33,7 +33,7 @@ function FounderPage() {
                 Kerbino Yel Deng
               </h1>
               <p className="mt-3 font-display text-xl text-[color:var(--gold)]">
-                Founder &amp; Principal Consultant
+                Founder &amp; CEO
               </p>
               <p className="mt-6 max-w-2xl text-cloud/80 md:text-lg">
                 Kerbino founded The KSL Group to bridge what he saw as a persistent gap between
