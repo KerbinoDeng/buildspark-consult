@@ -16,10 +16,30 @@ export const Route = createFileRoute("/projects")({
 });
 
 const projects = [
-  { img: project1, sector: "Civic infrastructure", title: "Bayview Transit Interchange", meta: "Owner's representative · $310M · 2024", body: "Multi-modal interchange uniting commuter rail, BRT, and ferry. Led the owner's program through 4 phases under an active operating site." },
-  { img: project2, sector: "Commercial high-rise", title: "One Harbour Plaza", meta: "Pre-construction · 42 floors · 2023", body: "Estimating, VE, and tender management for a Class A office tower. Reduced base bid by 11% without compromising façade strategy." },
-  { img: hero, sector: "Industrial", title: "Mariposa Cold Storage Facility", meta: "Project management · $84M · 2022", body: "180,000 sq.ft. automated cold storage facility on a brownfield. Coordinated three EPC packages and a phased commissioning plan." },
-  { img: project1, sector: "Healthcare", title: "St. Helena Medical Center Expansion", meta: "Construction oversight · $145M · 2021", body: "Two new clinical wings while keeping the hospital fully operational. Zero patient-impact incidents over 28 months on site." },
+  {
+    img: project1, sector: "Civic infrastructure", title: "Bayview Transit Interchange", meta: "Owner's representative · $310M · 2024",
+    problem: "An ageing interchange had to absorb 40% more daily riders while remaining fully operational throughout a four-phase rebuild.",
+    solution: "We embedded an owner's team across design, contractor coordination, and stakeholder liaison — sequencing works around live commuter schedules.",
+    result: "Delivered on time, 6% under approved budget, with zero service-day closures and an industry safety award for the site team.",
+  },
+  {
+    img: project2, sector: "Commercial high-rise", title: "One Harbour Plaza", meta: "Pre-construction · 42 floors · 2023",
+    problem: "Tender returns came in 18% over the developer's hard cost cap, threatening the project's financing close.",
+    solution: "Led a value-engineering sprint across façade, MEP, and structural packages; restructured the trade tender into early-works + GMP.",
+    result: "Re-tendered base bid 11% below original, locked GMP within 30 days, and preserved the architect's façade intent.",
+  },
+  {
+    img: hero, sector: "Industrial", title: "Mariposa Cold Storage Facility", meta: "Project management · $84M · 2022",
+    problem: "A brownfield site with contaminated soils and three parallel EPC packages risked a 9-month commissioning slip.",
+    solution: "Built an integrated master schedule, co-located the EPC leads weekly, and ran a phased commissioning model with the operator.",
+    result: "Commissioned 6 weeks ahead of revised baseline; first product through the racks 11 days after substantial completion.",
+  },
+  {
+    img: project1, sector: "Healthcare", title: "St. Helena Medical Center Expansion", meta: "Construction oversight · $145M · 2021",
+    problem: "Two new clinical wings had to be built without disrupting a 320-bed hospital running at 94% occupancy.",
+    solution: "Acted as owner's rep across infection-control logistics, after-hours tie-ins, and a dedicated clinical liaison protocol.",
+    result: "28 months on site with zero patient-impact incidents and HCAHPS scores held steady through every phase.",
+  },
 ];
 
 function ProjectsPage() {
@@ -54,7 +74,11 @@ function ProjectsPage() {
                 <p className="eyebrow text-accent">{p.sector}</p>
                 <h2 className="mt-3 font-display text-3xl md:text-4xl">{p.title}</h2>
                 <p className="mt-2 text-sm text-muted-foreground">{p.meta}</p>
-                <p className="mt-5 text-base text-foreground/80">{p.body}</p>
+                <dl className="mt-6 space-y-4 text-sm">
+                  <div><dt className="eyebrow text-muted-foreground">Problem</dt><dd className="mt-1 text-foreground/80">{p.problem}</dd></div>
+                  <div><dt className="eyebrow text-muted-foreground">Solution</dt><dd className="mt-1 text-foreground/80">{p.solution}</dd></div>
+                  <div><dt className="eyebrow text-accent">Result</dt><dd className="mt-1 font-medium text-foreground">{p.result}</dd></div>
+                </dl>
               </div>
             </article>
           ))}
