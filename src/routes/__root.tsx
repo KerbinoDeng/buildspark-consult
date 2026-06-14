@@ -1,3 +1,11 @@
+import "@fontsource/urbanist/400.css";
+import "@fontsource/urbanist/500.css";
+import "@fontsource/urbanist/600.css";
+import "@fontsource/urbanist/700.css";
+import "@fontsource/epilogue/400.css";
+import "@fontsource/epilogue/500.css";
+import "@fontsource/epilogue/600.css";
+
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Outlet,
@@ -11,6 +19,9 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { SiteHeader } from "../components/site-header";
+import { SiteFooter } from "../components/site-footer";
+
 
 function NotFoundComponent() {
   return (
@@ -77,15 +88,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Meridian Consulting — Project Management & Construction" },
+      { name: "description", content: "Independent project management and construction consultancy delivering complex builds on time, on budget, and to specification." },
+      { property: "og:title", content: "Meridian Consulting" },
+      { property: "og:description", content: "Project management and construction consultancy." },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
+
     links: [
       {
         rel: "stylesheet",
@@ -118,8 +128,14 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-      <Outlet />
+      <div className="flex min-h-screen flex-col">
+        <SiteHeader />
+        <main className="flex-1">
+          <Outlet />
+        </main>
+        <SiteFooter />
+      </div>
     </QueryClientProvider>
+
   );
 }
