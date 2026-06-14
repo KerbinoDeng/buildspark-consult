@@ -90,10 +90,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Meridian Consulting — Project Management & Construction" },
       { name: "description", content: "Independent project management and construction consultancy delivering complex builds on time, on budget, and to specification." },
-      { property: "og:title", content: "Meridian Consulting" },
-      { property: "og:description", content: "Project management and construction consultancy." },
+      { property: "og:title", content: "Meridian Consulting — Project Management & Construction" },
+      { property: "og:description", content: "Independent project management and construction consultancy delivering complex builds on time, on budget, and to specification." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Meridian Consulting — Project Management & Construction" },
+      { name: "twitter:description", content: "Independent project management and construction consultancy delivering complex builds on time, on budget, and to specification." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/3e2152cc-127f-498f-b7f8-98c87d97ad08/id-preview-87840b56--e8fa61e4-758e-4bb8-9281-da65f956438c.lovable.app-1781428764851.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/3e2152cc-127f-498f-b7f8-98c87d97ad08/id-preview-87840b56--e8fa61e4-758e-4bb8-9281-da65f956438c.lovable.app-1781428764851.png" },
     ],
 
     links: [
