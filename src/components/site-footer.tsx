@@ -25,22 +25,24 @@ export function SiteFooter() {
     <footer className="mt-24 bg-[color:var(--ink)] text-cloud">
       <div className="container-tight grid gap-12 py-16 md:grid-cols-[1.5fr_1fr_1fr_1.2fr]">
         <div>
-          <div className="flex items-center gap-2 font-display text-lg">
-            <span className="inline-block h-2.5 w-2.5 rotate-45 bg-[color:var(--steel)]" aria-hidden />
-            Meridian Consulting
+          <div className="font-display text-xl">
+            The <span className="text-[color:var(--gold)]">KSL</span> Group
           </div>
+          <p className="mt-3 text-xs uppercase tracking-[0.18em] text-[color:var(--gold)]">
+            Strategy Designed. Leaders Built.
+          </p>
           <p className="mt-4 max-w-sm text-sm text-cloud/70">
-            Independent project, procurement, and construction management consultancy delivering
-            complex builds across East Africa.
+            Kerbino Strategy &amp; Leadership Group Ltd. — a specialist management
+            consultancy in governance, crisis leadership, and public-sector strategy
+            across East Africa and South Sudan.
           </p>
         </div>
 
         <div>
-          <p className="eyebrow text-cloud/50">Studio</p>
+          <p className="eyebrow text-cloud/50">Firm</p>
           <ul className="mt-4 space-y-2 text-sm text-cloud/80">
             <li><Link to="/about" className="hover:text-cloud">About</Link></li>
             <li><Link to="/services" className="hover:text-cloud">Services</Link></li>
-            <li><Link to="/projects" className="hover:text-cloud">Projects</Link></li>
             <li><Link to="/insights" className="hover:text-cloud">Insights</Link></li>
             <li><Link to="/contact" className="hover:text-cloud">Contact</Link></li>
           </ul>
@@ -49,7 +51,7 @@ export function SiteFooter() {
         <div>
           <p className="eyebrow text-cloud/50">Contact</p>
           <ul className="mt-4 space-y-2 text-sm text-cloud/80">
-            <li>kerbinoyel@gmail.com</li>
+            <li>info@kslgroup.co</li>
             <li>+254 743 978 678</li>
             <li>+211 927 272 752</li>
             <li>Nairobi · Juba</li>
@@ -57,23 +59,25 @@ export function SiteFooter() {
         </div>
 
         <div>
-          <p className="eyebrow text-cloud/50">Newsletter</p>
-          <p className="mt-4 text-sm text-cloud/70">Monthly field notes on cost, schedule, and recovery. No spam.</p>
+          <p className="eyebrow text-cloud/50">Insights briefing</p>
+          <p className="mt-4 text-sm text-cloud/70">
+            Quarterly notes on governance, crisis leadership, and institutional reform.
+          </p>
           <form className="mt-4 flex gap-2" onSubmit={onSubmit}>
             <input
               type="email"
               name="email"
               required
               maxLength={255}
-              placeholder="you@company.com"
-              className="min-w-0 flex-1 rounded-sm border border-white/15 bg-white/5 px-3 py-2 text-sm text-cloud placeholder:text-cloud/40 focus:border-[color:var(--steel)] focus:outline-none"
+              placeholder="you@organisation.org"
+              className="min-w-0 flex-1 rounded-sm border border-white/15 bg-white/5 px-3 py-2 text-sm text-cloud placeholder:text-cloud/40 focus:border-[color:var(--gold)] focus:outline-none"
             />
             <button
               type="submit"
               disabled={state === "sending"}
-              className="rounded-sm bg-[color:var(--steel)] px-4 py-2 text-sm font-medium text-cloud hover:bg-cloud hover:text-[color:var(--ink)] disabled:opacity-60"
+              className="rounded-sm bg-[color:var(--gold)] px-4 py-2 text-sm font-semibold text-[color:var(--ink)] hover:bg-cloud disabled:opacity-60"
             >
-              {state === "ok" ? "Done" : state === "sending" ? "…" : "Join"}
+              {state === "ok" ? "Done" : state === "sending" ? "…" : "Subscribe"}
             </button>
           </form>
           {state === "error" && <p className="mt-2 text-xs text-destructive">Could not subscribe. Try again.</p>}
@@ -82,8 +86,8 @@ export function SiteFooter() {
 
       <div className="border-t border-white/10">
         <div className="container-tight flex flex-col items-start justify-between gap-2 py-6 text-xs text-cloud/50 md:flex-row md:items-center">
-          <p>© {new Date().getFullYear()} Meridian Consulting. All rights reserved.</p>
-          <p>Independent project & construction consultancy · Nairobi · Juba</p>
+          <p>© {new Date().getFullYear()} Kerbino Strategy &amp; Leadership Group Ltd. All rights reserved.</p>
+          <p>Nairobi, Kenya · Operating across East Africa</p>
         </div>
       </div>
     </footer>

@@ -1,13 +1,21 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowUpRight, ClipboardList, HardHat, PackageSearch } from "lucide-react";
+import {
+  ArrowUpRight,
+  Compass,
+  ShieldAlert,
+  Users,
+  Landmark,
+  FileSearch,
+  GraduationCap,
+} from "lucide-react";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Services — Meridian Consulting" },
-      { name: "description", content: "Project management, procurement, and construction management for owners and developers across East Africa." },
-      { property: "og:title", content: "Services — Meridian Consulting" },
-      { property: "og:description", content: "End-to-end consultancy services from feasibility to handover." },
+      { title: "Services — The KSL Group" },
+      { name: "description", content: "Six service lines: strategic planning, crisis leadership, executive development, governance reform, policy research, and training & facilitation." },
+      { property: "og:title", content: "Services — The KSL Group" },
+      { property: "og:description", content: "Six integrated service lines for governments, institutions, and development partners across East Africa." },
       { property: "og:url", content: "https://buildspark-consult.lovable.app/services" },
     ],
     links: [{ rel: "canonical", href: "https://buildspark-consult.lovable.app/services" }],
@@ -16,15 +24,99 @@ export const Route = createFileRoute("/services")({
 });
 
 const services = [
-  { icon: ClipboardList, n: "01", title: "Project Management", body: "We act as the owner's program lead from feasibility through handover. Schedule, cost, scope, and risk under one accountable team.", points: ["Critical-path schedule control", "Monthly cost & forecast reports", "Risk register & change management", "Design coordination"] },
-  { icon: PackageSearch, n: "02", title: "Procurement", body: "Tender strategy, vendor qualification, and contract negotiation that protect the budget without slowing the build. Cross-border sourcing across the region.", points: ["Tender packaging & evaluation", "Vendor pre-qualification", "Cross-border sourcing & logistics", "Contract negotiation & GMP lock-in"] },
-  { icon: HardHat, n: "03", title: "Construction Management", body: "Owner's representative on site — contractor governance, safety, QA, and handover. We hold the contractor to the contract, every week.", points: ["Daily site supervision", "Contractor & sub coordination", "Safety & compliance audits", "Quality assurance & handover"] },
+  {
+    icon: Compass, n: "01",
+    title: "Strategic Planning & Institutional Development",
+    body: "We design strategic frameworks and institutional systems that allow organisations to perform, adapt, and deliver — at scale, under pressure, and with integrity.",
+    points: [
+      "Multi-year strategic plan design",
+      "Institutional architecture & operating-model design",
+      "Mandate, vision, and value-system formulation",
+      "Change-management & implementation roadmaps",
+    ],
+  },
+  {
+    icon: ShieldAlert, n: "02",
+    title: "Crisis Leadership Advisory & Capacity Building",
+    body: "DBA-level expertise in crisis leadership for fragile and conflict-affected settings, grounded in original peer-reviewed research from South Sudan.",
+    points: [
+      "Crisis-leadership diagnostics & playbooks",
+      "Executive coaching under crisis conditions",
+      "Scenario-planning & stress-testing",
+      "Institutional resilience frameworks",
+    ],
+  },
+  {
+    icon: Users, n: "03",
+    title: "Executive Leadership Development & Coaching",
+    body: "One-to-one coaching and cohort programmes that build leaders capable of delivering with integrity in complex political and operational environments.",
+    points: [
+      "C-suite & ministerial coaching",
+      "Cohort leadership academies",
+      "360° leadership diagnostics",
+      "Succession & talent-pipeline design",
+    ],
+  },
+  {
+    icon: Landmark, n: "04",
+    title: "Governance, Accountability & Public Sector Reform",
+    body: "Advisory to governments, oversight institutions, and development partners on governance reform, accountability systems, and public-sector performance.",
+    points: [
+      "Governance diagnostic & reform roadmaps",
+      "Accountability framework design",
+      "Legislative and oversight capacity building",
+      "Anti-corruption, transparency, and PFM advisory",
+    ],
+  },
+  {
+    icon: FileSearch, n: "05",
+    title: "Research, Policy Analysis & Advisory",
+    body: "High-quality policy research, institutional analyses, and strategic advisory for governments, multilaterals, NGOs, and academic institutions.",
+    points: [
+      "Policy research & analysis",
+      "Institutional performance evaluations",
+      "Monitoring & evaluation frameworks",
+      "Stakeholder consultations & policy dialogue",
+    ],
+  },
+  {
+    icon: GraduationCap, n: "06",
+    title: "Training, Facilitation & Workshop Design",
+    body: "Custom training programmes and facilitated workshops designed to build internal capacity rather than create consultant dependency.",
+    points: [
+      "Bespoke workshop & curriculum design",
+      "Strategy-retreat facilitation",
+      "Train-the-trainer programmes",
+      "Multi-stakeholder dialogue facilitation",
+    ],
+  },
 ];
 
 const packages = [
-  { name: "Discovery sprint", price: "From $12k", duration: "2 weeks", body: "Independent review of an active or planned program. Risk register, cost & schedule sanity check, written recommendations.", features: ["Document & contract review", "Stakeholder interviews", "Risk + recovery memo"], featured: false },
-  { name: "Owner's representative", price: "From $18k / mo", duration: "6+ months", body: "Embedded program lead on your behalf — cost, schedule, contractor governance, and monthly board reporting.", features: ["Partner-led delivery", "Monthly cost & schedule reports", "On-site supervision"], featured: true },
-  { name: "Project recovery", price: "Custom", duration: "Engagement-based", body: "Turnaround leadership for distressed builds. Interim project director within two weeks of signing.", features: ["Forensic schedule analysis", "Claims & dispute support", "Turnaround plan + execution"], featured: false },
+  {
+    name: "Discovery engagement",
+    price: "From $8k",
+    duration: "2–3 weeks",
+    body: "Diagnostic review of your institution's strategic, governance, or leadership challenge. Independent findings and a written recommendation memo.",
+    features: ["Document & stakeholder review", "Confidential interviews", "Findings memo + roadmap"],
+    featured: false,
+  },
+  {
+    name: "Retained advisory",
+    price: "From $15k / mo",
+    duration: "6–12 months",
+    body: "Embedded strategic advisory — Principal-led, with quarterly leadership work, monthly governance reviews, and on-call counsel.",
+    features: ["Partner-led delivery", "Monthly governance reviews", "Executive coaching"],
+    featured: true,
+  },
+  {
+    name: "Programme & research",
+    price: "Custom",
+    duration: "Engagement-based",
+    body: "Multi-month research, evaluation, or reform-design engagements for governments, multilaterals, and INGOs.",
+    features: ["Original empirical research", "Stakeholder consultations", "Final report + dissemination"],
+    featured: false,
+  },
 ];
 
 function ServicesPage() {
@@ -35,27 +127,27 @@ function ServicesPage() {
         <div className="container-tight py-10 md:py-14">
           <div className="grid gap-4 md:grid-cols-12 md:gap-5">
             <div className="md:col-span-8 bento-card-dark md:p-12">
-              <p className="eyebrow text-cloud/70">/ Services</p>
-              <h1 className="mt-6 font-display text-5xl leading-[1.02] md:text-7xl">
-                Three disciplines.<br />One accountable team.
+              <p className="eyebrow text-[color:var(--gold)]">/ Services</p>
+              <h1 className="mt-6 font-display text-5xl leading-[1.02] text-cloud md:text-7xl">
+                Six service lines.<br />One integrated practice.
               </h1>
               <p className="mt-6 max-w-xl text-cloud/80">
-                Project management, procurement, and construction management — engage Meridian
-                as a complete project office or as a single specialist. Every engagement is partner-led.
+                Standalone engagements or fully integrated advisory packages — every brief
+                tailored to context, capacity, and objectives.
               </p>
             </div>
             <div className="md:col-span-4 bento-card flex flex-col justify-between">
-              <p className="eyebrow text-[color:var(--steel)]">Engagement</p>
+              <p className="eyebrow text-[color:var(--gold)]">Engagement</p>
               <div>
                 <p className="font-display text-5xl">6+</p>
-                <p className="mt-2 text-sm text-muted-foreground">Months typical engagement length</p>
+                <p className="mt-2 text-sm text-muted-foreground">Months typical retained engagement</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* SERVICES BENTO */}
+      {/* SERVICE LINES */}
       <section className="py-16 md:py-24">
         <div className="container-tight space-y-4 md:space-y-5">
           {services.map((s, i) => {
@@ -64,9 +156,9 @@ function ServicesPage() {
               <article key={s.n} className={dark ? "bento-card-dark md:p-12" : "bento-card md:p-12"}>
                 <div className="grid gap-8 md:grid-cols-12">
                   <div className="md:col-span-3">
-                    <p className={`eyebrow ${dark ? "text-cloud/60" : "text-[color:var(--steel)]"}`}>{s.n}</p>
-                    <s.icon className="mt-4 h-8 w-8" strokeWidth={1.5} />
-                    <h2 className="mt-6 font-display text-3xl md:text-4xl">{s.title}</h2>
+                    <p className={`eyebrow ${dark ? "text-[color:var(--gold)]" : "text-[color:var(--gold)]"}`}>{s.n}</p>
+                    <s.icon className={`mt-4 h-8 w-8 ${dark ? "text-[color:var(--gold)]" : "text-[color:var(--ink)]"}`} strokeWidth={1.5} />
+                    <h2 className={`mt-6 font-display text-2xl md:text-3xl ${dark ? "text-cloud" : ""}`}>{s.title}</h2>
                   </div>
                   <div className="md:col-span-5">
                     <p className={dark ? "text-cloud/80" : "text-muted-foreground"}>{s.body}</p>
@@ -74,7 +166,7 @@ function ServicesPage() {
                   <ul className={`md:col-span-4 space-y-3 text-sm ${dark ? "text-cloud/85" : "text-foreground/85"}`}>
                     {s.points.map((p) => (
                       <li key={p} className={`flex gap-2 border-t pt-3 first:border-t-0 first:pt-0 ${dark ? "border-white/10" : "border-border"}`}>
-                        <span className="text-[color:var(--steel)]">—</span>{p}
+                        <span className="text-[color:var(--gold)]">—</span>{p}
                       </li>
                     ))}
                   </ul>
@@ -88,21 +180,21 @@ function ServicesPage() {
       {/* PACKAGES */}
       <section className="border-t border-border bg-[color:var(--cloud)] py-20 md:py-24">
         <div className="container-tight">
-          <p className="eyebrow text-[color:var(--steel)]">/ Engagements</p>
+          <p className="eyebrow text-[color:var(--gold)]">/ Engagement shapes</p>
           <h2 className="mt-3 font-display text-4xl md:text-5xl">Starting points.</h2>
           <p className="mt-4 max-w-2xl text-muted-foreground">
-            Every program is scoped to fit, but most engagements start from one of three shapes.
+            Every brief is scoped to fit, but most engagements begin from one of three shapes.
           </p>
           <div className="mt-12 grid gap-4 md:grid-cols-3 md:gap-5">
             {packages.map((p) => (
               <div key={p.name} className={`${p.featured ? "bento-card-dark md:p-8" : "bento-card md:p-8"}`}>
-                {p.featured && <p className="eyebrow text-cloud/70">/ Most engaged</p>}
-                <h3 className="mt-2 font-display text-2xl">{p.name}</h3>
+                {p.featured && <p className="eyebrow text-[color:var(--gold)]">/ Most engaged</p>}
+                <h3 className={`mt-2 font-display text-2xl ${p.featured ? "text-cloud" : ""}`}>{p.name}</h3>
                 <p className={`mt-2 text-sm ${p.featured ? "text-cloud/60" : "text-muted-foreground"}`}>{p.duration}</p>
-                <p className="mt-6 font-display text-3xl">{p.price}</p>
+                <p className={`mt-6 font-display text-3xl ${p.featured ? "text-[color:var(--gold)]" : ""}`}>{p.price}</p>
                 <p className={`mt-6 text-sm ${p.featured ? "text-cloud/80" : "text-foreground/80"}`}>{p.body}</p>
                 <ul className={`mt-6 space-y-2 text-sm ${p.featured ? "text-cloud/85" : ""}`}>
-                  {p.features.map((f) => (<li key={f} className="flex gap-2"><span className="text-[color:var(--steel)]">—</span>{f}</li>))}
+                  {p.features.map((f) => (<li key={f} className="flex gap-2"><span className="text-[color:var(--gold)]">—</span>{f}</li>))}
                 </ul>
               </div>
             ))}
@@ -114,13 +206,13 @@ function ServicesPage() {
         <div className="container-tight rule-top pt-16">
           <div className="grid items-end gap-8 md:grid-cols-12">
             <h2 className="md:col-span-8 font-display text-4xl md:text-5xl">
-              Need a scoping call? We answer within a business day.
+              Ready to scope your engagement?
             </h2>
             <Link
               to="/contact"
-              className="md:col-span-4 md:text-right inline-flex items-center gap-2 rounded-sm bg-[color:var(--ink)] px-7 py-4 text-sm font-medium text-cloud hover:bg-[color:var(--steel)] md:justify-end"
+              className="md:col-span-4 md:text-right inline-flex items-center gap-2 rounded-sm bg-[color:var(--gold)] px-7 py-4 text-sm font-semibold text-[color:var(--ink)] hover:bg-[color:var(--ink)] hover:text-[color:var(--gold)] md:justify-end"
             >
-              Book a consultation <ArrowUpRight className="h-4 w-4" />
+              Book a discovery call <ArrowUpRight className="h-4 w-4" />
             </Link>
           </div>
         </div>

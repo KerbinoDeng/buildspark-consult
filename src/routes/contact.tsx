@@ -7,10 +7,10 @@ import { submitContact } from "@/lib/leads.functions";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Meridian Consulting" },
-      { name: "description", content: "Talk to Meridian Consulting about your project. Most enquiries answered within one business day." },
-      { property: "og:title", content: "Contact — Meridian Consulting" },
-      { property: "og:description", content: "Get in touch with Meridian Consulting." },
+      { title: "Contact — The KSL Group" },
+      { name: "description", content: "Book a complimentary 60-minute discovery call with The KSL Group's Principal Consultant. Most enquiries answered within one business day." },
+      { property: "og:title", content: "Contact — The KSL Group" },
+      { property: "og:description", content: "Book a discovery call with The KSL Group." },
       { property: "og:url", content: "https://buildspark-consult.lovable.app/contact" },
     ],
     links: [{ rel: "canonical", href: "https://buildspark-consult.lovable.app/contact" }],
@@ -59,17 +59,18 @@ function ContactPage() {
         <div className="container-tight py-10 md:py-14">
           <div className="grid gap-4 md:grid-cols-12 md:gap-5">
             <div className="md:col-span-8 bento-card-dark md:p-12">
-              <p className="eyebrow text-cloud/70">/ Contact</p>
-              <h1 className="mt-6 font-display text-5xl leading-[1.02] md:text-7xl">
-                Tell us about<br />the project.
+              <p className="eyebrow text-[color:var(--gold)]">/ Contact</p>
+              <h1 className="mt-6 font-display text-5xl leading-[1.02] text-cloud md:text-7xl">
+                Book a discovery<br />call.
               </h1>
               <p className="mt-6 max-w-xl text-cloud/80">
-                A partner reviews every enquiry. Most are answered within one business day.
+                Tell us briefly about your institution and the challenge you're working on.
+                A Principal reviews every enquiry, typically within one business day.
               </p>
             </div>
             <div className="md:col-span-4 bento-card space-y-5">
-              <p className="eyebrow text-[color:var(--steel)]">Direct</p>
-              <Row icon={Mail} label="Email" value="kerbinoyel@gmail.com" />
+              <p className="eyebrow text-[color:var(--gold)]">Direct</p>
+              <Row icon={Mail} label="Email" value="info@kslgroup.co" />
               <Row icon={Phone} label="Kenya" value="+254 743 978 678" />
               <Row icon={Phone} label="South Sudan" value="+211 927 272 752" />
               <Row icon={MapPin} label="Offices" value="Nairobi · Juba" />
@@ -77,6 +78,7 @@ function ContactPage() {
           </div>
         </div>
       </section>
+
 
       {/* FORM */}
       <section className="py-16 md:py-24">
