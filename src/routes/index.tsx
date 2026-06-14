@@ -17,9 +17,9 @@ import { TESTIMONIALS } from "@/lib/content";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "The KSL Group — Strategy Designed. Leaders Built." },
+      { title: "KSL Advisory — Strategy Designed. Leaders Built." },
       { name: "description", content: "Kerbino Strategy & Leadership Group Ltd. — specialist consultancy in governance, crisis leadership, and public-sector strategy across East Africa and South Sudan." },
-      { property: "og:title", content: "The KSL Group" },
+      { property: "og:title", content: "KSL Advisory" },
       { property: "og:description", content: "Strategy Designed. Leaders Built. Governance · Crisis Leadership · Public-Sector Strategy." },
     ],
   }),
@@ -37,7 +37,7 @@ function Home() {
               <p className="eyebrow text-[color:var(--gold)]">Nairobi · Juba · East Africa</p>
 
               <h1 className="mt-8 font-display text-5xl leading-[1.02] text-[color:var(--gold)] md:text-7xl">
-                The KSL GROUP
+                KSL ADVISORY
               </h1>
 
               <div className="mt-6 border-t border-[color:var(--gold)]/40 pt-4">
@@ -95,7 +95,7 @@ function Home() {
             </div>
             <div className="md:col-span-7 bento-card md:p-10">
               <p className="text-foreground/85 md:text-lg">
-                The KSL Group is headquartered in Nairobi, with operations across East
+                KSL Advisory is headquartered in Nairobi, with operations across East
                 Africa and South Sudan. Founded by Kerbino Yel Deng — a Doctor of
                 Business Administration candidate at the Chandaria School of Business,
                 USIU-Africa — we deliver transformative results for public institutions,

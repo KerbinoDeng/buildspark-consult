@@ -5,13 +5,13 @@ import { CASE_STUDIES } from "@/lib/content";
 export const Route = createFileRoute("/case-studies")({
   head: () => ({
     meta: [
-      { title: "Case Studies — The KSL Group" },
+      { title: "Case Studies — KSL Advisory" },
       {
         name: "description",
         content:
-          "Selected anonymised engagements from The KSL Group — governance diagnostics, crisis leadership advisory, and oversight-institution reform across South Sudan and East Africa.",
+          "Selected anonymised engagements from KSL Advisory — governance diagnostics, crisis leadership advisory, and oversight-institution reform across South Sudan and East Africa.",
       },
-      { property: "og:title", content: "Case Studies — The KSL Group" },
+      { property: "og:title", content: "Case Studies — KSL Advisory" },
       {
         property: "og:description",
         content:

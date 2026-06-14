@@ -8,9 +8,9 @@ import { ARTICLES } from "@/lib/content";
 export const Route = createFileRoute("/insights")({
   head: () => ({
     meta: [
-      { title: "Insights — The KSL Group" },
-      { name: "description", content: "Research-grounded analysis on governance, crisis leadership, and public-sector reform from The KSL Group." },
-      { property: "og:title", content: "Insights — The KSL Group" },
+      { title: "Insights — KSL Advisory" },
+      { name: "description", content: "Research-grounded analysis on governance, crisis leadership, and public-sector reform from KSL Advisory." },
+      { property: "og:title", content: "Insights — KSL Advisory" },
       { property: "og:description", content: "Research notes on governance, crisis leadership, and institutional reform." },
     ],
   }),

@@ -5,8 +5,8 @@ import { ARTICLES } from "@/lib/content";
 export const Route = createFileRoute("/insights/$slug")({
   head: ({ params }) => {
     const a = ARTICLES.find((x) => x.slug === params.slug);
-    const title = a ? `${a.title} — KSL Insights` : "Insights — KSL Group";
-    const desc = a?.dek ?? "Insights from The KSL Group.";
+    const title = a ? `${a.title} — KSL Insights` : "Insights — KSL Advisory";
+    const desc = a?.dek ?? "Insights from KSL Advisory.";
     return {
       meta: [
         { title },

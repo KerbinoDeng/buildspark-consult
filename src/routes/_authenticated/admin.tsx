@@ -12,7 +12,7 @@ import { Button } from "@/components/ui/button";
 export const Route = createFileRoute("/_authenticated/admin")({
   head: () => ({
     meta: [
-      { title: "Admin — The KSL Group" },
+      { title: "Admin — KSL Advisory" },
       { name: "robots", content: "noindex" },
     ],
   }),
@@ -147,7 +147,7 @@ function AdminPage() {
                   <div className="mt-3 flex gap-3 text-xs">
                     <a
                       className="underline"
-                      href={`mailto:${s.email}?subject=Re: your enquiry to The KSL Group`}
+                      href={`mailto:${s.email}?subject=Re: your enquiry to KSL Advisory`}
                     >
                       Reply by email
                     </a>

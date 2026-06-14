@@ -3,8 +3,8 @@ import { createFileRoute } from "@tanstack/react-router";
 export const Route = createFileRoute("/privacy")({
   head: () => ({
     meta: [
-      { title: "Privacy Policy — The KSL Group" },
-      { name: "description", content: "How The KSL Group collects, uses, and protects personal data." },
+      { title: "Privacy Policy — KSL Advisory" },
+      { name: "description", content: "How KSL Advisory collects, uses, and protects personal data." },
     ],
   }),
   component: Privacy,
