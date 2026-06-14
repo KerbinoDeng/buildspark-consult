@@ -5,7 +5,7 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About — KSL Advisory" },
-      { name: "description", content: "The Kerbino Strategy & Leadership Group Ltd. — a specialist management consultancy in governance, crisis leadership, and public-sector strategy across East Africa." },
+      { name: "description", content: "KSL Advisory — a specialist management consultancy in governance, crisis leadership, and public-sector strategy across East Africa." },
       { property: "og:title", content: "About — KSL Advisory" },
       { property: "og:description", content: "Founded by Kerbino Yel Deng, DBA candidate at USIU-Africa. Strategy Designed. Leaders Built." },
       { property: "og:url", content: "https://buildspark-consult.lovable.app/about" },
@@ -37,7 +37,7 @@ function AboutPage() {
                 Strategy Designed.<br /><span className="text-[color:var(--gold)]">Leaders Built.</span>
               </h1>
               <p className="mt-6 max-w-xl text-cloud/80">
-                The Kerbino Strategy &amp; Leadership Group Ltd. is a specialist management
+                KSL Advisory is a specialist management
                 consultancy headquartered in Nairobi, with operations across East Africa
                 and South Sudan.
               </p>

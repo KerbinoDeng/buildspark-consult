@@ -30,7 +30,7 @@ function Terms() {
             substitute for a formal engagement.
           </Block>
           <Block title="3. Intellectual property">
-            All site content is owned by The Kerbino Strategy &amp; Leadership Group Ltd. or
+            All site content is owned by KSL Advisory or
             licensed to it. The KSL name and the KSL Crisis Leadership Framework are
             proprietary. You may share and quote our public materials with attribution; you may
             not republish them in full without written permission.

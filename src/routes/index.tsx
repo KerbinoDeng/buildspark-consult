@@ -18,7 +18,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "KSL Advisory — Strategy Designed. Leaders Built." },
-      { name: "description", content: "Kerbino Strategy & Leadership Group Ltd. — specialist consultancy in governance, crisis leadership, and public-sector strategy across East Africa and South Sudan." },
+      { name: "description", content: "KSL Advisory — specialist consultancy in governance, crisis leadership, and public-sector strategy across East Africa and South Sudan." },
       { property: "og:title", content: "KSL Advisory" },
       { property: "og:description", content: "Strategy Designed. Leaders Built. Governance · Crisis Leadership · Public-Sector Strategy." },
     ],
@@ -42,7 +42,7 @@ function Home() {
 
               <div className="mt-6 border-t border-[color:var(--gold)]/40 pt-4">
                 <p className="font-display text-xl text-cloud md:text-2xl">
-                  The Kerbino Strategy &amp; Leadership Group Ltd.
+                  KSL Advisory
                 </p>
               </div>
 
