@@ -44,8 +44,8 @@ function AboutPage() {
             </div>
             <div className="md:col-span-4 grid grid-cols-2 gap-4 md:gap-5">
               <div className="bento-card flex flex-col justify-between"><p className="eyebrow text-[color:var(--gold)]">HQ</p><p className="font-display text-3xl">Nairobi</p></div>
-              <div className="bento-card flex flex-col justify-between bg-[color:var(--cloud)]"><p className="eyebrow text-[color:var(--ink)]">Region</p><p className="font-display text-3xl">East Africa</p></div>
-              <div className="bento-card col-span-2 flex flex-col justify-between"><p className="eyebrow text-[color:var(--gold)]">Founder</p><p className="font-display text-2xl">Kerbino Yel Deng, DBA</p></div>
+              <div className="bento-card flex flex-col justify-between bg-[color:var(--cloud)]"><p className="eyebrow text-[color:var(--ink)]">Operating regions</p><p className="font-display text-lg leading-tight">South Sudan · Kenya · Uganda · Ethiopia · EAC</p></div>
+              <div className="bento-card col-span-2 flex flex-col justify-between"><p className="eyebrow text-[color:var(--gold)]">Founder</p><p className="font-display text-2xl">Kerbino Yel Deng — DBA Candidate</p></div>
             </div>
           </div>
         </div>
@@ -85,7 +85,7 @@ function AboutPage() {
           <div className="md:col-span-5 bento-card-dark md:p-10">
             <p className="eyebrow text-[color:var(--gold)]">/ Founder</p>
             <h2 className="mt-4 font-display text-4xl text-cloud md:text-5xl">Kerbino Yel Deng</h2>
-            <p className="mt-2 text-[color:var(--gold)]">DBA — Founder & Principal Consultant</p>
+            <p className="mt-2 text-[color:var(--gold)]">DBA Candidate — Founder &amp; Principal Consultant</p>
             <p className="mt-6 text-cloud/80 text-sm">
               Doctoral research: Crisis Leadership &amp; Public Service Delivery in South Sudan
               · Chandaria School of Business, USIU-Africa.
@@ -109,6 +109,31 @@ function AboutPage() {
               <li className="flex gap-2"><span className="text-[color:var(--gold)]">—</span> Regional experience: South Sudan, Kenya, East Africa</li>
               <li className="flex gap-2"><span className="text-[color:var(--gold)]">—</span> Peer-reviewed publications on crisis leadership and governance</li>
             </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* APPROACH — FOUR PHASES */}
+      <section className="py-20 md:py-24">
+        <div className="container-tight">
+          <p className="eyebrow text-[color:var(--gold)]">/ Our approach</p>
+          <h2 className="mt-3 max-w-3xl font-display text-4xl md:text-5xl">Four phases. One disciplined arc.</h2>
+          <div className="mt-12 grid gap-4 md:grid-cols-4 md:gap-5">
+            {[
+              { n: "01", t: "Diagnose", b: "Rapid institutional assessment, stakeholder mapping, and context analysis." },
+              { n: "02", t: "Design", b: "Evidence-based strategy and leadership framework, co-developed with the client." },
+              { n: "03", t: "Deliver", b: "Structured implementation with clear milestones and performance indicators." },
+              { n: "04", t: "Embed", b: "Capacity transfer, training, and follow-up to sustain results beyond the engagement." },
+            ].map((p, i) => {
+              const dark = i % 2 === 1;
+              return (
+                <article key={p.n} className={`${dark ? "bento-card-dark" : "bento-card"} md:p-8`}>
+                  <p className="font-display text-3xl text-[color:var(--gold)]">{p.n}</p>
+                  <h3 className={`mt-3 font-display text-xl ${dark ? "text-cloud" : ""}`}>{p.t}</h3>
+                  <p className={`mt-3 text-sm ${dark ? "text-cloud/75" : "text-muted-foreground"}`}>{p.b}</p>
+                </article>
+              );
+            })}
           </div>
         </div>
       </section>

@@ -181,12 +181,13 @@ function Home() {
       <section className="border-y border-border bg-[color:var(--cloud)] py-16">
         <div className="container-tight">
           <p className="eyebrow text-center text-muted-foreground">Who we serve</p>
-          <ul className="mt-8 grid grid-cols-2 gap-y-6 text-center font-display text-lg text-foreground/75 md:grid-cols-5 md:text-xl">
+          <ul className="mt-8 grid grid-cols-2 gap-y-6 text-center font-display text-base text-foreground/75 md:grid-cols-6 md:text-lg">
             {[
               "Governments & Ministries",
               "Oversight Institutions",
               "UN & Multilaterals",
               "Bilateral Donors & INGOs",
+              "Private Sector",
               "Civil Society & Academia",
             ].map((s) => (
               <li key={s} className="border-l border-border first:border-l-0 md:border-l">{s}</li>

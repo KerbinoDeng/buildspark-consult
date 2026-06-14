@@ -57,6 +57,16 @@ export function SiteFooter() {
             <li>+254 743 978 678</li>
             <li>+211 927 272 752</li>
             <li>Nairobi · Juba</li>
+            <li>
+              <a
+                href="https://www.linkedin.com/company/ksl-group"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-cloud"
+              >
+                LinkedIn ↗
+              </a>
+            </li>
           </ul>
         </div>
 
