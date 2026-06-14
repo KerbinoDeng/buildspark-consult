@@ -10,7 +10,9 @@ import {
   Mail,
   Phone,
   MapPin,
+  Quote,
 } from "lucide-react";
+import { TESTIMONIALS } from "@/lib/content";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -190,6 +192,32 @@ function Home() {
               <li key={s} className="border-l border-border first:border-l-0 md:border-l">{s}</li>
             ))}
           </ul>
+        </div>
+      </section>
+
+      {/* TESTIMONIALS */}
+      <section className="py-20 md:py-24">
+        <div className="container-tight">
+          <p className="eyebrow text-[color:var(--gold)]">/ In their words</p>
+          <h2 className="mt-3 font-display text-4xl md:text-5xl">What clients tell us.</h2>
+          <div className="mt-12 grid gap-4 md:grid-cols-3 md:gap-5">
+            {TESTIMONIALS.map((t, i) => (
+              <figure key={i} className={`${i === 1 ? "bento-card-dark" : "bento-card"} md:p-8 flex flex-col gap-5`}>
+                <Quote className={`h-7 w-7 ${i === 1 ? "text-[color:var(--gold)]" : "text-[color:var(--gold)]"}`} strokeWidth={1.5} />
+                <blockquote className={`font-display text-lg leading-snug ${i === 1 ? "text-cloud" : ""}`}>
+                  "{t.quote}"
+                </blockquote>
+                <figcaption className={`text-xs uppercase tracking-wider ${i === 1 ? "text-cloud/60" : "text-muted-foreground"}`}>
+                  {t.attribution}
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+          <div className="mt-10">
+            <Link to="/case-studies" className="inline-flex items-center gap-2 text-sm font-medium text-[color:var(--ink)]">
+              See selected engagements <ArrowUpRight className="h-4 w-4" />
+            </Link>
+          </div>
         </div>
       </section>
 
