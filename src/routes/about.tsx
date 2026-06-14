@@ -45,7 +45,7 @@ function AboutPage() {
             <div className="md:col-span-4 grid grid-cols-2 gap-4 md:gap-5">
               <div className="bento-card flex flex-col justify-between"><p className="eyebrow text-[color:var(--gold)]">HQ</p><p className="font-display text-3xl">Nairobi</p></div>
               <div className="bento-card flex flex-col justify-between bg-[color:var(--cloud)]"><p className="eyebrow text-[color:var(--ink)]">Operating regions</p><p className="font-display text-lg leading-tight">South Sudan · Kenya · Uganda · Ethiopia · EAC</p></div>
-              <div className="bento-card col-span-2 flex flex-col justify-between"><p className="eyebrow text-[color:var(--gold)]">Founder</p><p className="font-display text-2xl">Kerbino Yel Deng — DBA Candidate</p></div>
+              <div className="bento-card col-span-2 flex flex-col justify-between"><p className="eyebrow text-[color:var(--gold)]">Founder</p><p className="font-display text-2xl">Kerbino Yel Deng — Founder &amp; CEO</p></div>
             </div>
           </div>
         </div>
@@ -85,7 +85,7 @@ function AboutPage() {
           <div className="md:col-span-5 bento-card-dark md:p-10">
             <p className="eyebrow text-[color:var(--gold)]">/ Founder</p>
             <h2 className="mt-4 font-display text-4xl text-cloud md:text-5xl">Kerbino Yel Deng</h2>
-            <p className="mt-2 text-[color:var(--gold)]">DBA Candidate — Founder &amp; Principal Consultant</p>
+            <p className="mt-2 text-[color:var(--gold)]">Founder &amp; CEO</p>
             <p className="mt-6 text-cloud/80 text-sm">
               Doctoral research: Crisis Leadership &amp; Public Service Delivery in South Sudan
               · Chandaria School of Business, USIU-Africa.
