@@ -8,7 +8,7 @@ import { Input } from "@/components/ui/input";
 export const Route = createFileRoute("/auth")({
   head: () => ({
     meta: [
-      { title: "Sign in — The KSL Group" },
+      { title: "Sign in — KSL Advisory" },
       { name: "robots", content: "noindex" },
     ],
   }),

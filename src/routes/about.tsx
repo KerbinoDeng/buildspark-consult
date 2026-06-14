@@ -4,9 +4,9 @@ import { ArrowUpRight } from "lucide-react";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — The KSL Group" },
+      { title: "About — KSL Advisory" },
       { name: "description", content: "The Kerbino Strategy & Leadership Group Ltd. — a specialist management consultancy in governance, crisis leadership, and public-sector strategy across East Africa." },
-      { property: "og:title", content: "About — The KSL Group" },
+      { property: "og:title", content: "About — KSL Advisory" },
       { property: "og:description", content: "Founded by Kerbino Yel Deng, DBA candidate at USIU-Africa. Strategy Designed. Leaders Built." },
       { property: "og:url", content: "https://buildspark-consult.lovable.app/about" },
     ],
@@ -100,7 +100,7 @@ function AboutPage() {
             </p>
             <p className="mt-4 text-foreground/85">
               His academic and professional career — combining DBA-level research with
-              hands-on regional practice — makes The KSL Group uniquely positioned to serve
+              hands-on regional practice — makes KSL Advisory uniquely positioned to serve
               both institutional clients and development partners operating in complex
               environments.
             </p>
@@ -162,7 +162,7 @@ function AboutPage() {
         <div className="container-tight rule-top pt-16">
           <div className="grid items-end gap-8 md:grid-cols-12">
             <h2 className="md:col-span-8 font-display text-4xl md:text-5xl">
-              Partner with KSL Group.
+              Partner with KSL Advisory.
             </h2>
             <Link
               to="/contact"

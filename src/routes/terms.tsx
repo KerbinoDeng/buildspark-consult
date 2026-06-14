@@ -3,8 +3,8 @@ import { createFileRoute } from "@tanstack/react-router";
 export const Route = createFileRoute("/terms")({
   head: () => ({
     meta: [
-      { title: "Terms of Use — The KSL Group" },
-      { name: "description", content: "Terms governing use of the KSL Group website and digital materials." },
+      { title: "Terms of Use — KSL Advisory" },
+      { name: "description", content: "Terms governing use of the KSL Advisory website and digital materials." },
     ],
   }),
   component: Terms,
