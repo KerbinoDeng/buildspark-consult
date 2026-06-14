@@ -34,8 +34,8 @@ function ContactPage() {
       <section className="py-20">
         <div className="container-tight grid gap-16 md:grid-cols-12">
           <aside className="md:col-span-4 space-y-8">
-            <ContactRow icon={Mail} label="Email" value="hello@meridian.co" />
-            <ContactRow icon={Phone} label="Phone" value="+1 (415) 555 0144" />
+            <ContactRow icon={Mail} label="Email" value="kerbinoyel@gmail.com" />
+            <ContactRow icon={Phone} label="Phone" value={"+254 743 978 678\n0927 272 752"} />
             <ContactRow icon={MapPin} label="Office" value={"440 Pine Street, Floor 12\nSan Francisco, CA 94104"} />
             <div className="rule-top pt-8">
               <p className="eyebrow text-accent">Hours</p>
