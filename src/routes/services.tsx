@@ -22,21 +22,15 @@ const services = [
   },
   {
     n: "02",
-    title: "Construction Oversight",
-    body: "Owner's-representative supervision on site. We hold the contractor to the contract, enforce safety governance, run QA inspections, and keep the program honest week to week.",
-    points: ["Daily site supervision", "Contractor & sub coordination", "Safety & compliance audits", "Quality assurance inspections"],
+    title: "Procurement",
+    body: "Tender strategy, vendor qualification, and contract negotiation that protect the budget without slowing the build. Cross-border sourcing across Kenya, South Sudan, and the wider East Africa region.",
+    points: ["Tender packaging & evaluation", "Vendor & subcontractor pre-qualification", "Cross-border sourcing & logistics", "Contract negotiation & GMP lock-in"],
   },
   {
     n: "03",
-    title: "Pre-Construction",
-    body: "De-risk the build before mobilisation. Independent estimating, value engineering, constructability review, procurement strategy, and tender management.",
-    points: ["Cost planning & estimating", "Value engineering workshops", "Tender packaging & evaluation", "Procurement strategy"],
-  },
-  {
-    n: "04",
-    title: "Advisory & Audit",
-    body: "When projects drift, we recover them. Independent program audits, claims and dispute support, schedule forensics, and turnaround planning.",
-    points: ["Program health audits", "Schedule & delay analysis", "Claims & dispute support", "Recovery & turnaround plans"],
+    title: "Construction Management",
+    body: "Owner's-representative leadership on site. We hold the contractor to the contract, enforce safety governance, run QA inspections, and keep the program honest week to week through to handover.",
+    points: ["Daily site supervision", "Contractor & sub coordination", "Safety & compliance audits", "Quality assurance & handover"],
   },
 ];
 
@@ -47,11 +41,12 @@ function ServicesPage() {
         <div className="container-tight">
           <p className="eyebrow text-accent">/ Services</p>
           <h1 className="mt-6 max-w-4xl font-display text-5xl leading-[1.05] md:text-7xl">
-            Four practices.<br />One accountable team.
+            Three practices.<br />One accountable team.
           </h1>
           <p className="mt-8 max-w-2xl text-lg text-muted-foreground">
-            Engage Meridian as a complete project office or as a single specialist.
-            Every engagement is led by a partner — never delegated to a junior bench.
+            Project management, procurement, and construction management — engage Meridian
+            as a complete project office or as a single specialist. Every engagement is
+            led by a partner.
           </p>
         </div>
       </section>

@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowUpRight, HardHat, LineChart, Ruler, ShieldCheck } from "lucide-react";
+import { ArrowUpRight, ClipboardList, HardHat, PackageSearch } from "lucide-react";
 import heroImg from "@/assets/hero-construction.jpg";
 import project1 from "@/assets/project-1.jpg";
 import project2 from "@/assets/project-2.jpg";
@@ -7,10 +7,10 @@ import project2 from "@/assets/project-2.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Meridian Consulting — Project Management & Construction" },
-      { name: "description", content: "Independent project management and construction consultancy for complex commercial, civic, and industrial builds." },
+      { title: "Meridian Consulting — Project, Procurement & Construction Management" },
+      { name: "description", content: "Independent consultancy delivering project management, procurement, and construction management for complex builds across East Africa." },
       { property: "og:title", content: "Meridian Consulting" },
-      { property: "og:description", content: "Project management and construction consultancy." },
+      { property: "og:description", content: "Project management, procurement, and construction management." },
     ],
   }),
   component: Home,
@@ -24,10 +24,9 @@ const stats = [
 ];
 
 const services = [
-  { icon: LineChart, title: "Project Management", body: "End-to-end leadership from feasibility through handover — schedule, cost, scope, and risk under a single accountable team." },
-  { icon: HardHat, title: "Construction Oversight", body: "Owner's-representative site supervision, contractor coordination, safety governance, and quality assurance." },
-  { icon: Ruler, title: "Pre-Construction", body: "Estimating, value engineering, constructability review, and tender management to de-risk the build before mobilisation." },
-  { icon: ShieldCheck, title: "Advisory & Audit", body: "Independent program audits, dispute support, claims analysis, and recovery planning for projects in distress." },
+  { icon: ClipboardList, title: "Project Management", body: "End-to-end leadership from feasibility through handover — schedule, cost, scope, and risk under a single accountable team." },
+  { icon: PackageSearch, title: "Procurement", body: "Tender strategy, vendor qualification, cross-border sourcing, and contract negotiation that protects budget without slowing the build." },
+  { icon: HardHat, title: "Construction Management", body: "Owner's-representative site leadership, contractor coordination, safety governance, and quality assurance through to handover." },
 ];
 
 function Home() {
@@ -46,15 +45,15 @@ function Home() {
 
         <div className="container-tight relative grid min-h-[88vh] grid-cols-1 items-end gap-12 py-24 md:grid-cols-12">
           <div className="md:col-span-8">
-            <p className="eyebrow text-cloud/70">Est. 2003 · San Francisco</p>
+            <p className="eyebrow text-cloud/70">Nairobi · Juba · East Africa</p>
             <h1 className="mt-6 font-display text-5xl leading-[1.02] sm:text-7xl md:text-[5.5rem]">
-              Building the<br />
-              <span className="italic text-[color:var(--steel)]">complicated</span> things.
+              Project, procurement &<br />
+              <span className="italic text-[color:var(--steel)]">construction</span> management.
             </h1>
             <p className="mt-8 max-w-xl text-lg text-cloud/80">
               Meridian is an independent consultancy embedded with owners and developers
-              across commercial, civic, and industrial construction. We lead the program —
-              you keep the keys.
+              across East Africa — leading the program, sourcing the trades, and running
+              the site from groundbreak to handover.
             </p>
             <div className="mt-10 flex flex-wrap gap-3">
               <Link
@@ -91,18 +90,18 @@ function Home() {
         <div className="container-tight">
           <div className="grid gap-10 md:grid-cols-12">
             <div className="md:col-span-4">
-              <p className="eyebrow text-accent">/ Services</p>
+              <p className="eyebrow text-accent">/ What we do</p>
               <h2 className="mt-4 font-display text-4xl md:text-5xl">
-                A full delivery team, hired by the floor.
+                Three disciplines. One accountable team.
               </h2>
             </div>
             <p className="md:col-span-7 md:col-start-6 text-lg text-muted-foreground">
-              We slot into your organisation as a complete project office or as a single
-              specialist — without the overhead of a tier-one consultancy.
+              Project management, procurement, and construction management — delivered
+              by partners, not subcontracted to a junior bench.
             </p>
           </div>
 
-          <div className="mt-16 grid gap-px overflow-hidden rounded-sm border border-border bg-border md:grid-cols-2">
+          <div className="mt-16 grid gap-px overflow-hidden rounded-sm border border-border bg-border md:grid-cols-3">
             {services.map((s) => (
               <article key={s.title} className="group bg-card p-10 transition-colors hover:bg-muted">
                 <s.icon className="h-7 w-7 text-accent" strokeWidth={1.5} />
