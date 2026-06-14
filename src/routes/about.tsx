@@ -45,7 +45,7 @@ function AboutPage() {
             <div className="md:col-span-4 grid grid-cols-2 gap-4 md:gap-5">
               <div className="bento-card flex flex-col justify-between"><p className="eyebrow text-[color:var(--gold)]">HQ</p><p className="font-display text-3xl">Nairobi</p></div>
               <div className="bento-card flex flex-col justify-between bg-[color:var(--cloud)]"><p className="eyebrow text-[color:var(--ink)]">Operating regions</p><p className="font-display text-lg leading-tight">South Sudan · Kenya · Uganda · Ethiopia · EAC</p></div>
-              <div className="bento-card col-span-2 flex flex-col justify-between"><p className="eyebrow text-[color:var(--gold)]">Founder</p><p className="font-display text-2xl">Kerbino Yel Deng — DBA Candidate</p></div>
+              <div className="bento-card col-span-2 flex flex-col justify-between"><p className="eyebrow text-[color:var(--gold)]">Founder</p><p className="font-display text-2xl">Kerbino Yel Deng — Founder &amp; CEO</p></div>
             </div>
           </div>
         </div>
