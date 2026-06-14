@@ -81,7 +81,35 @@ function ServicesPage() {
         </div>
       </section>
 
-      <section className="pb-28">
+      <section className="border-t border-border bg-[color:var(--cloud)] py-24">
+        <div className="container-tight">
+          <p className="eyebrow text-accent">/ Engagements</p>
+          <h2 className="mt-4 max-w-3xl font-display text-4xl md:text-5xl">Starting points.</h2>
+          <p className="mt-4 max-w-2xl text-muted-foreground">
+            Every program is scoped to fit, but most engagements start from one of three shapes.
+          </p>
+          <div className="mt-14 grid gap-px overflow-hidden rounded-sm border border-border bg-border md:grid-cols-3">
+            {[
+              { name: "Discovery sprint", price: "From $12k", duration: "2 weeks", body: "Independent review of an active or planned program. Risk register, cost & schedule sanity check, written recommendations.", features: ["Document & contract review", "Stakeholder interviews", "Risk + recovery memo"], featured: false },
+              { name: "Owner's representative", price: "From $18k / mo", duration: "6+ months", body: "Embedded program lead on your behalf — cost, schedule, contractor governance, and monthly board reporting.", features: ["Partner-led delivery", "Monthly cost & schedule reports", "On-site supervision"], featured: true },
+              { name: "Project recovery", price: "Custom", duration: "Engagement-based", body: "Turnaround leadership for distressed builds. Interim project director within two weeks of signing.", features: ["Forensic schedule analysis", "Claims & dispute support", "Turnaround plan + execution"], featured: false },
+            ].map((p) => (
+              <div key={p.name} className={`bg-card p-10 ${p.featured ? "ring-1 ring-accent" : ""}`}>
+                {p.featured && <p className="eyebrow text-accent">/ Most engaged</p>}
+                <h3 className="mt-2 font-display text-2xl">{p.name}</h3>
+                <p className="mt-2 text-sm text-muted-foreground">{p.duration}</p>
+                <p className="mt-6 font-display text-3xl">{p.price}</p>
+                <p className="mt-6 text-sm text-foreground/80">{p.body}</p>
+                <ul className="mt-6 space-y-2 text-sm">
+                  {p.features.map((f) => (<li key={f} className="flex gap-2"><span className="text-accent">—</span>{f}</li>))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-28">
         <div className="container-tight rule-top pt-16">
           <div className="grid items-end gap-8 md:grid-cols-12">
             <h2 className="md:col-span-8 font-display text-4xl md:text-5xl">
@@ -89,9 +117,9 @@ function ServicesPage() {
             </h2>
             <Link
               to="/contact"
-              className="md:col-span-4 md:text-right inline-flex items-center gap-2 rounded-sm bg-[color:var(--ink)] px-7 py-4 text-sm font-medium text-cloud md:justify-end"
+              className="md:col-span-4 md:text-right inline-flex items-center gap-2 rounded-sm bg-accent px-7 py-4 text-sm font-medium text-[color:var(--ink)] hover:bg-primary hover:text-primary-foreground md:justify-end"
             >
-              Get in touch <ArrowUpRight className="h-4 w-4" />
+              Book a consultation <ArrowUpRight className="h-4 w-4" />
             </Link>
           </div>
         </div>
