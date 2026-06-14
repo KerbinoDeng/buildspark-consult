@@ -42,7 +42,9 @@ export function SiteFooter() {
           <p className="eyebrow text-cloud/50">Firm</p>
           <ul className="mt-4 space-y-2 text-sm text-cloud/80">
             <li><Link to="/about" className="hover:text-cloud">About</Link></li>
+            <li><Link to="/team/kerbino" className="hover:text-cloud">Founder</Link></li>
             <li><Link to="/services" className="hover:text-cloud">Services</Link></li>
+            <li><Link to="/case-studies" className="hover:text-cloud">Case studies</Link></li>
             <li><Link to="/insights" className="hover:text-cloud">Insights</Link></li>
             <li><Link to="/contact" className="hover:text-cloud">Contact</Link></li>
           </ul>
@@ -87,7 +89,11 @@ export function SiteFooter() {
       <div className="border-t border-white/10">
         <div className="container-tight flex flex-col items-start justify-between gap-2 py-6 text-xs text-cloud/50 md:flex-row md:items-center">
           <p>© {new Date().getFullYear()} Kerbino Strategy &amp; Leadership Group Ltd. All rights reserved.</p>
-          <p>Nairobi, Kenya · Operating across East Africa</p>
+          <div className="flex flex-wrap gap-4">
+            <Link to="/privacy" className="hover:text-cloud">Privacy</Link>
+            <Link to="/terms" className="hover:text-cloud">Terms</Link>
+            <span>Nairobi · Operating across East Africa</span>
+          </div>
         </div>
       </div>
     </footer>
