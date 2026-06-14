@@ -37,9 +37,9 @@ export function SiteHeader() {
 
         <Link
           to="/contact"
-          className="hidden rounded-sm bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-[color:var(--ink)] md:inline-flex"
+          className="hidden rounded-sm bg-accent px-4 py-2 text-sm font-medium text-[color:var(--ink)] transition-colors hover:bg-primary hover:text-primary-foreground md:inline-flex"
         >
-          Start a project
+          Book a consultation
         </Link>
 
         <button
