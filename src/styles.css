@@ -35,6 +35,8 @@
   --color-ink: var(--ink);
   --color-steel: var(--steel);
   --color-cloud: var(--cloud);
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
 
   --shadow-elevated: 0 30px 80px -30px color-mix(in oklab, var(--ink) 35%, transparent);
   --shadow-card: 0 1px 0 0 color-mix(in oklab, var(--ink) 6%, transparent),
