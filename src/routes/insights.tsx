@@ -1,4 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useState } from "react";
+import { useServerFn } from "@tanstack/react-start";
+import { subscribeNewsletter } from "@/lib/leads.functions";
 import { ArrowUpRight } from "lucide-react";
 
 export const Route = createFileRoute("/insights")({
@@ -45,6 +48,8 @@ const posts = [
 ];
 
 function InsightsPage() {
+  const subscribe = useServerFn(subscribeNewsletter);
+  const [state, setState] = useState<"idle" | "sending" | "ok" | "error">("idle");
   return (
     <>
       <section className="border-b border-border bg-background py-24">
@@ -75,24 +80,30 @@ function InsightsPage() {
           </div>
           <form
             className="md:col-span-4 flex gap-2"
-            onSubmit={(e) => {
+            onSubmit={async (e) => {
               e.preventDefault();
-              const f = e.currentTarget as HTMLFormElement;
-              f.reset();
-              alert("Check your inbox — the checklist is on its way.");
+              setState("sending");
+              const fd = new FormData(e.currentTarget);
+              try {
+                const res = await subscribe({ data: { email: String(fd.get("email") ?? ""), source: "lead-magnet-gmp" } });
+                if (res.ok) { setState("ok"); (e.target as HTMLFormElement).reset(); } else setState("error");
+              } catch { setState("error"); }
             }}
           >
             <input
               type="email"
+              name="email"
               required
+              maxLength={255}
               placeholder="you@company.com"
-              className="min-w-0 flex-1 rounded-sm border border-border bg-card px-4 py-3 text-sm focus:border-accent focus:outline-none"
+              className="min-w-0 flex-1 rounded-sm border border-border bg-card px-4 py-3 text-sm focus:border-[color:var(--steel)] focus:outline-none"
             />
             <button
               type="submit"
-              className="rounded-sm bg-[color:var(--ink)] px-5 py-3 text-sm font-medium text-cloud hover:bg-primary"
+              disabled={state === "sending"}
+              className="rounded-sm bg-[color:var(--ink)] px-5 py-3 text-sm font-medium text-cloud hover:bg-[color:var(--steel)] disabled:opacity-60"
             >
-              Send it
+              {state === "ok" ? "Sent" : state === "sending" ? "…" : "Send it"}
             </button>
           </form>
         </div>

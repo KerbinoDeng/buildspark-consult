@@ -113,6 +113,18 @@ function Home() {
         </div>
       </section>
 
+      {/* SECTORS / CLIENT STRIP */}
+      <section className="border-y border-border bg-background py-14">
+        <div className="container-tight">
+          <p className="eyebrow text-center text-muted-foreground">Sectors served across East Africa</p>
+          <ul className="mt-8 grid grid-cols-2 gap-y-6 text-center font-display text-xl text-foreground/70 md:grid-cols-6 md:text-2xl">
+            {["Commercial", "Civic", "Industrial", "Healthcare", "Hospitality", "Education"].map((s) => (
+              <li key={s} className="border-l border-border first:border-l-0 md:border-l">{s}</li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
       {/* WORK + PROOF BENTO */}
       <section className="border-t border-border bg-[color:var(--cloud)] py-20 md:py-28">
         <div className="container-tight">
