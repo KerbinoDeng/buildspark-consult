@@ -151,6 +151,29 @@ function Home() {
         </div>
       </section>
 
+      {/* TESTIMONIALS */}
+      <section className="border-t border-border py-28">
+        <div className="container-tight">
+          <p className="eyebrow text-accent">/ Trusted by</p>
+          <h2 className="mt-4 max-w-3xl font-display text-4xl md:text-5xl">What owners say after handover.</h2>
+          <div className="mt-16 grid gap-px overflow-hidden rounded-sm border border-border bg-border md:grid-cols-3">
+            {[
+              { q: "Meridian ran the program like it was their own balance sheet. We closed two months early.", a: "M. Achieng", r: "Director of Development, Tatu Holdings" },
+              { q: "The only consultancy that told us the bad news first — and had the recovery plan ready.", a: "J. Lokong", r: "COO, Nile Logistics" },
+              { q: "Calm, technical, and relentless. Exactly what a $300M civic build needs.", a: "S. Mwangi", r: "City Engineer, Bayview Authority" },
+            ].map((t) => (
+              <figure key={t.a} className="bg-card p-10">
+                <blockquote className="font-display text-xl leading-snug text-foreground">"{t.q}"</blockquote>
+                <figcaption className="mt-8 text-sm">
+                  <span className="font-medium text-foreground">{t.a}</span>
+                  <span className="block text-muted-foreground">{t.r}</span>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-28">
         <div className="container-tight">
@@ -162,9 +185,9 @@ function Home() {
               <div className="md:col-span-4 md:text-right">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center gap-2 rounded-sm bg-[color:var(--ink)] px-7 py-4 text-sm font-medium text-cloud hover:bg-primary"
+                  className="inline-flex items-center gap-2 rounded-sm bg-accent px-7 py-4 text-sm font-medium text-[color:var(--ink)] hover:bg-primary hover:text-primary-foreground"
                 >
-                  Book an intro call <ArrowUpRight className="h-4 w-4" />
+                  Book a consultation <ArrowUpRight className="h-4 w-4" />
                 </Link>
               </div>
             </div>

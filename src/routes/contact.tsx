@@ -79,6 +79,30 @@ function ContactPage() {
           </form>
         </div>
       </section>
+
+      {/* FAQ */}
+      <section className="border-t border-border bg-[color:var(--cloud)] py-24">
+        <div className="container-tight grid gap-12 md:grid-cols-12">
+          <div className="md:col-span-4">
+            <p className="eyebrow text-accent">/ FAQ</p>
+            <h2 className="mt-4 font-display text-4xl md:text-5xl">Common questions.</h2>
+          </div>
+          <dl className="md:col-span-8 divide-y divide-border border-y border-border">
+            {[
+              { q: "What does a typical engagement look like?", a: "We start with a paid 2-week discovery — current state, risks, and a delivery plan. From there, most owners retain us as project manager or owner's representative through handover." },
+              { q: "How do you measure success?", a: "Against the metrics the owner cares about: cost vs. approved budget, schedule vs. baseline, safety incidents, and quality at handover. We report monthly with one page, not fifty." },
+              { q: "Do you take on distressed projects?", a: "Yes — recovery and audit work is a core service. We can mobilise an interim project director within two weeks." },
+              { q: "Where do you work?", a: "Primarily East Africa from our Nairobi and Juba offices. We've supported owners across Kenya, South Sudan, Uganda, and Rwanda." },
+              { q: "How quickly do you respond?", a: "A partner reviews every enquiry. Most are answered within one business day." },
+            ].map((item) => (
+              <div key={item.q} className="py-6">
+                <dt className="font-display text-lg text-foreground">{item.q}</dt>
+                <dd className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.a}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      </section>
     </>
   );
 }
