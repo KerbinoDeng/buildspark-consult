@@ -20,7 +20,7 @@ function Privacy() {
 
         <div className="prose-ksl mt-8 space-y-6 text-foreground/85">
           <Block title="1. Who we are">
-            The Kerbino Strategy &amp; Leadership Group Ltd. ("KSL", "we", "our") is a
+            KSL Advisory ("KSL", "we", "our") is a
             specialist management consultancy registered in Kenya, with operations in Nairobi
             and Juba. For privacy enquiries, write to{" "}
             <a className="underline" href="mailto:info@kslgroup.co">info@kslgroup.co</a>.

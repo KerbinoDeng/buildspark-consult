@@ -32,7 +32,7 @@ export function SiteFooter() {
             Strategy Designed. Leaders Built.
           </p>
           <p className="mt-4 max-w-sm text-sm text-cloud/70">
-            Kerbino Strategy &amp; Leadership Group Ltd. — a specialist management
+            KSL Advisory — a specialist management
             consultancy in governance, crisis leadership, and public-sector strategy
             across East Africa and South Sudan.
           </p>
@@ -98,7 +98,7 @@ export function SiteFooter() {
 
       <div className="border-t border-white/10">
         <div className="container-tight flex flex-col items-start justify-between gap-2 py-6 text-xs text-cloud/50 md:flex-row md:items-center">
-          <p>© {new Date().getFullYear()} Kerbino Strategy &amp; Leadership Group Ltd. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} KSL Advisory All rights reserved.</p>
           <div className="flex flex-wrap gap-4">
             <Link to="/privacy" className="hover:text-cloud">Privacy</Link>
             <Link to="/terms" className="hover:text-cloud">Terms</Link>
