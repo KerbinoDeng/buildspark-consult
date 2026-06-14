@@ -110,18 +110,35 @@
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
-    letter-spacing: -0.02em;
-    font-weight: 600;
+    letter-spacing: -0.015em;
+    font-weight: 400;
+    line-height: 1.05;
   }
 
   /* Editorial number/eyebrow */
   .eyebrow {
     font-family: var(--font-sans);
     text-transform: uppercase;
-    letter-spacing: 0.22em;
+    letter-spacing: 0.18em;
     font-size: 0.72rem;
     font-weight: 600;
   }
+}
+
+@utility bento-card {
+  position: relative;
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-border);
+  background: var(--color-card);
+  padding: 1.75rem;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+@utility bento-card-dark {
+  position: relative;
+  border-radius: 0.5rem;
+  background: var(--color-ink);
+  color: var(--color-cloud);
+  padding: 1.75rem;
 }
 
 @utility container-tight {
