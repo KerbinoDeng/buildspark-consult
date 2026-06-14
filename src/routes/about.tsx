@@ -113,6 +113,31 @@ function AboutPage() {
         </div>
       </section>
 
+      {/* APPROACH — FOUR PHASES */}
+      <section className="py-20 md:py-24">
+        <div className="container-tight">
+          <p className="eyebrow text-[color:var(--gold)]">/ Our approach</p>
+          <h2 className="mt-3 max-w-3xl font-display text-4xl md:text-5xl">Four phases. One disciplined arc.</h2>
+          <div className="mt-12 grid gap-4 md:grid-cols-4 md:gap-5">
+            {[
+              { n: "01", t: "Diagnose", b: "Rapid institutional assessment, stakeholder mapping, and context analysis." },
+              { n: "02", t: "Design", b: "Evidence-based strategy and leadership framework, co-developed with the client." },
+              { n: "03", t: "Deliver", b: "Structured implementation with clear milestones and performance indicators." },
+              { n: "04", t: "Embed", b: "Capacity transfer, training, and follow-up to sustain results beyond the engagement." },
+            ].map((p, i) => {
+              const dark = i % 2 === 1;
+              return (
+                <article key={p.n} className={`${dark ? "bento-card-dark" : "bento-card"} md:p-8`}>
+                  <p className="font-display text-3xl text-[color:var(--gold)]">{p.n}</p>
+                  <h3 className={`mt-3 font-display text-xl ${dark ? "text-cloud" : ""}`}>{p.t}</h3>
+                  <p className={`mt-3 text-sm ${dark ? "text-cloud/75" : "text-muted-foreground"}`}>{p.b}</p>
+                </article>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
       {/* CORE VALUES */}
       <section className="py-20 md:py-24">
         <div className="container-tight">
