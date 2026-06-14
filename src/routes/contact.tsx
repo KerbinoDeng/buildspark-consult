@@ -85,38 +85,40 @@ function ContactPage() {
         <div className="container-tight">
           <div className="grid gap-4 md:grid-cols-12 md:gap-5">
             <form onSubmit={onSubmit} className="md:col-span-8 bento-card md:p-10 space-y-6">
-              <p className="eyebrow text-[color:var(--steel)]">/ Project brief</p>
+              <p className="eyebrow text-[color:var(--gold)]">/ Discovery brief</p>
               <div className="grid gap-6 md:grid-cols-2">
                 <Field label="Name" name="name" required />
-                <Field label="Company" name="company" />
+                <Field label="Organisation" name="company" />
                 <Field label="Email" name="email" type="email" required />
                 <Field label="Phone" name="phone" />
               </div>
               <div>
-                <label className="eyebrow text-muted-foreground" htmlFor="type">Project type</label>
-                <select id="type" name="type" className="mt-2 w-full rounded-sm border border-border bg-background px-4 py-3 text-base focus:border-[color:var(--steel)] focus:outline-none">
-                  <option>Commercial</option>
-                  <option>Civic / infrastructure</option>
-                  <option>Industrial</option>
-                  <option>Healthcare</option>
+                <label className="eyebrow text-muted-foreground" htmlFor="type">Area of interest</label>
+                <select id="type" name="type" className="mt-2 w-full rounded-sm border border-border bg-background px-4 py-3 text-base focus:border-[color:var(--gold)] focus:outline-none">
+                  <option>Strategic Planning & Institutional Development</option>
+                  <option>Crisis Leadership Advisory</option>
+                  <option>Executive Leadership Development & Coaching</option>
+                  <option>Governance, Accountability & Public Sector Reform</option>
+                  <option>Research, Policy Analysis & Advisory</option>
+                  <option>Training, Facilitation & Workshop Design</option>
                   <option>Other</option>
                 </select>
               </div>
               <div>
                 <label className="eyebrow text-muted-foreground" htmlFor="msg">Brief</label>
-                <textarea id="msg" name="msg" rows={6} required maxLength={5000} className="mt-2 w-full rounded-sm border border-border bg-background px-4 py-3 text-base focus:border-[color:var(--steel)] focus:outline-none" placeholder="A few sentences on the project, timeline, and what you need from us." />
+                <textarea id="msg" name="msg" rows={6} required maxLength={5000} className="mt-2 w-full rounded-sm border border-border bg-background px-4 py-3 text-base focus:border-[color:var(--gold)] focus:outline-none" placeholder="A few sentences on your institution, the challenge, and what you'd like to discuss." />
               </div>
               <div className="flex flex-wrap items-center gap-4">
                 <button
                   type="submit"
                   disabled={state === "sending"}
-                  className="inline-flex items-center gap-2 rounded-sm bg-[color:var(--ink)] px-7 py-4 text-sm font-medium text-cloud transition-colors hover:bg-[color:var(--steel)] disabled:opacity-60"
+                  className="inline-flex items-center gap-2 rounded-sm bg-[color:var(--gold)] px-7 py-4 text-sm font-semibold text-[color:var(--ink)] transition-colors hover:bg-[color:var(--ink)] hover:text-[color:var(--gold)] disabled:opacity-60"
                 >
                   {state === "sending" ? "Sending…" : (<>Send enquiry <ArrowUpRight className="h-4 w-4" /></>)}
                 </button>
                 {state === "sent" && (
-                  <span className="inline-flex items-center gap-2 text-sm text-[color:var(--steel)]">
-                    <CheckCircle2 className="h-4 w-4" /> Thanks — we'll be in touch.
+                  <span className="inline-flex items-center gap-2 text-sm text-[color:var(--gold)]">
+                    <CheckCircle2 className="h-4 w-4" /> Thanks — a Principal will be in touch.
                   </span>
                 )}
                 {state === "error" && error && <span className="text-sm text-destructive">{error}</span>}
@@ -125,13 +127,13 @@ function ContactPage() {
 
             <aside className="md:col-span-4 space-y-4">
               <div className="bento-card-dark">
-                <p className="eyebrow text-cloud/60">Response</p>
-                <p className="mt-3 font-display text-4xl">&lt;24h</p>
+                <p className="eyebrow text-[color:var(--gold)]">Response</p>
+                <p className="mt-3 font-display text-4xl text-cloud">&lt;24h</p>
                 <p className="mt-2 text-sm text-cloud/70">Typical first reply on weekdays.</p>
               </div>
               <div className="bento-card">
-                <p className="eyebrow text-[color:var(--steel)]">Hours</p>
-                <p className="mt-3 text-sm text-muted-foreground">Mon–Fri · 8:00–18:00 EAT<br />Emergency site support 24/7</p>
+                <p className="eyebrow text-[color:var(--gold)]">Hours</p>
+                <p className="mt-3 text-sm text-muted-foreground">Mon–Fri · 8:00–18:00 EAT</p>
               </div>
             </aside>
           </div>
@@ -142,16 +144,16 @@ function ContactPage() {
       <section className="border-t border-border bg-[color:var(--cloud)] py-20 md:py-24">
         <div className="container-tight grid gap-12 md:grid-cols-12">
           <div className="md:col-span-4">
-            <p className="eyebrow text-[color:var(--steel)]">/ FAQ</p>
+            <p className="eyebrow text-[color:var(--gold)]">/ FAQ</p>
             <h2 className="mt-4 font-display text-4xl md:text-5xl">Common questions.</h2>
           </div>
           <dl className="md:col-span-8 divide-y divide-border border-y border-border">
             {[
-              { q: "What does a typical engagement look like?", a: "We start with a paid 2-week discovery — current state, risks, and a delivery plan. From there, most owners retain us as project manager or owner's representative through handover." },
-              { q: "How do you measure success?", a: "Against the metrics the owner cares about: cost vs. approved budget, schedule vs. baseline, safety incidents, and quality at handover. We report monthly with one page, not fifty." },
-              { q: "Do you take on distressed projects?", a: "Yes — recovery and audit work is a core service. We can mobilise an interim project director within two weeks." },
-              { q: "Where do you work?", a: "Primarily East Africa from our Nairobi and Juba offices. We've supported owners across Kenya, South Sudan, Uganda, and Rwanda." },
-              { q: "How quickly do you respond?", a: "A partner reviews every enquiry. Most are answered within one business day." },
+              { q: "What does a typical engagement look like?", a: "Most engagements begin with a 2–3 week discovery — diagnostic review, stakeholder interviews, and a written recommendation memo. From there, clients retain us on monthly advisory or commission a defined research / reform programme." },
+              { q: "Who do you typically work with?", a: "Governments and ministries, oversight institutions, UN agencies and multilaterals, bilateral donors and INGOs, and civil society and academic institutions across East Africa and South Sudan." },
+              { q: "Do you take on crisis-response engagements?", a: "Yes — crisis leadership advisory is a core service line. We can mobilise senior counsel within days for institutions navigating acute pressure." },
+              { q: "Where do you operate?", a: "Headquartered in Nairobi, with operations across South Sudan, Kenya, Uganda, Ethiopia, and the broader EAC region." },
+              { q: "How quickly do you respond?", a: "A Principal reviews every enquiry. Most are answered within one business day." },
             ].map((item) => (
               <div key={item.q} className="py-6">
                 <dt className="font-display text-lg">{item.q}</dt>
@@ -165,6 +167,7 @@ function ContactPage() {
   );
 }
 
+
 function Field({ label, name, type = "text", required }: { label: string; name: string; type?: string; required?: boolean }) {
   return (
     <div>
@@ -175,7 +178,7 @@ function Field({ label, name, type = "text", required }: { label: string; name: 
         type={type}
         required={required}
         maxLength={255}
-        className="mt-2 w-full rounded-sm border border-border bg-background px-4 py-3 text-base focus:border-[color:var(--steel)] focus:outline-none"
+        className="mt-2 w-full rounded-sm border border-border bg-background px-4 py-3 text-base focus:border-[color:var(--gold)] focus:outline-none"
       />
     </div>
   );
@@ -184,7 +187,7 @@ function Field({ label, name, type = "text", required }: { label: string; name: 
 function Row({ icon: Icon, label, value }: { icon: typeof Mail; label: string; value: string }) {
   return (
     <div className="flex items-start gap-3">
-      <Icon className="mt-1 h-4 w-4 shrink-0 text-[color:var(--steel)]" strokeWidth={1.5} />
+      <Icon className="mt-1 h-4 w-4 shrink-0 text-[color:var(--gold)]" strokeWidth={1.5} />
       <div className="min-w-0">
         <p className="eyebrow text-muted-foreground">{label}</p>
         <p className="mt-0.5 truncate text-sm text-foreground">{value}</p>
