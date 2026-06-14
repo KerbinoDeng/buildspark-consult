@@ -52,7 +52,7 @@ function ArticlePage() {
         <p className="mt-4 text-lg text-foreground/80">{article.dek}</p>
 
         <div className="mt-10 space-y-5 text-foreground/85 leading-relaxed">
-          {article.body.map((p, i) => (
+          {article.body.map((p: string, i: number) => (
             <p key={i}>{p}</p>
           ))}
         </div>

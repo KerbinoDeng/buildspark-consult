@@ -68,7 +68,7 @@ function ServiceDetail() {
         <div className="container-tight grid gap-4 md:grid-cols-2 md:gap-5">
           <Card title="Outcomes">
             <ul className="space-y-2 text-sm text-foreground/85">
-              {service.outcomes.map((o) => (
+              {service.outcomes.map((o: string) => (
                 <li key={o} className="flex gap-2">
                   <span className="text-[color:var(--gold)]">→</span>
                   {o}
@@ -78,7 +78,7 @@ function ServiceDetail() {
           </Card>
           <Card title="Deliverables">
             <ul className="space-y-2 text-sm text-foreground/85">
-              {service.deliverables.map((d) => (
+              {service.deliverables.map((d: string) => (
                 <li key={d} className="flex gap-2">
                   <span className="text-[color:var(--gold)]">→</span>
                   {d}
