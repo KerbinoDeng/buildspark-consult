@@ -85,7 +85,7 @@ function AboutPage() {
           <div className="md:col-span-5 bento-card-dark md:p-10">
             <p className="eyebrow text-[color:var(--gold)]">/ Founder</p>
             <h2 className="mt-4 font-display text-4xl text-cloud md:text-5xl">Kerbino Yel Deng</h2>
-            <p className="mt-2 text-[color:var(--gold)]">DBA — Founder & Principal Consultant</p>
+            <p className="mt-2 text-[color:var(--gold)]">DBA Candidate — Founder &amp; Principal Consultant</p>
             <p className="mt-6 text-cloud/80 text-sm">
               Doctoral research: Crisis Leadership &amp; Public Service Delivery in South Sudan
               · Chandaria School of Business, USIU-Africa.
