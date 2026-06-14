@@ -1,16 +1,24 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowUpRight, ClipboardList, HardHat, PackageSearch, MapPin, Mail, Phone } from "lucide-react";
-import heroImg from "@/assets/hero-construction.jpg";
-import project1 from "@/assets/project-1.jpg";
-import project2 from "@/assets/project-2.jpg";
+import {
+  ArrowUpRight,
+  Compass,
+  ShieldAlert,
+  Users,
+  Landmark,
+  FileSearch,
+  GraduationCap,
+  Mail,
+  Phone,
+  MapPin,
+} from "lucide-react";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Meridian Consulting — Project, Procurement & Construction Management" },
-      { name: "description", content: "Independent consultancy delivering project management, procurement, and construction management for complex builds across East Africa." },
-      { property: "og:title", content: "Meridian Consulting" },
-      { property: "og:description", content: "Project management, procurement, and construction management." },
+      { title: "The KSL Group — Strategy Designed. Leaders Built." },
+      { name: "description", content: "Kerbino Strategy & Leadership Group Ltd. — specialist consultancy in governance, crisis leadership, and public-sector strategy across East Africa and South Sudan." },
+      { property: "og:title", content: "The KSL Group" },
+      { property: "og:description", content: "Strategy Designed. Leaders Built. Governance · Crisis Leadership · Public-Sector Strategy." },
     ],
   }),
   component: Home,
@@ -19,153 +27,169 @@ export const Route = createFileRoute("/")({
 function Home() {
   return (
     <>
-      {/* HERO BENTO */}
-      <section className="border-b border-border bg-background">
-        <div className="container-tight py-10 md:py-14">
-          <div className="grid auto-rows-[minmax(0,1fr)] gap-4 md:grid-cols-12 md:gap-5">
-            {/* Headline */}
-            <div className="md:col-span-8 md:row-span-2 bento-card-dark overflow-hidden md:p-12">
-              <img src={heroImg} alt="" className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-25" />
-              <div className="relative flex h-full flex-col justify-between gap-10">
-                <p className="eyebrow text-cloud/70">Nairobi · Juba · East Africa</p>
-                <div>
-                  <h1 className="font-display text-5xl leading-[1.02] md:text-7xl">
-                    Project, procurement<br />&amp; construction <em className="not-italic text-[color:var(--steel)]">management.</em>
-                  </h1>
-                  <p className="mt-6 max-w-xl text-base text-cloud/80 md:text-lg">
-                    An independent consultancy embedded with owners and developers — leading the
-                    program, sourcing the trades, and running the site to handover.
-                  </p>
-                  <div className="mt-8 flex flex-wrap gap-3">
-                    <Link to="/contact" className="inline-flex items-center gap-2 rounded-sm bg-cloud px-6 py-3 text-sm font-medium text-[color:var(--ink)] hover:bg-[color:var(--steel)] hover:text-cloud transition-colors">
-                      Book a consultation <ArrowUpRight className="h-4 w-4" />
-                    </Link>
-                    <Link to="/projects" className="inline-flex items-center gap-2 rounded-sm border border-cloud/30 px-6 py-3 text-sm font-medium text-cloud hover:bg-white/5">
-                      See our work
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
+      {/* HERO — cover-style navy panel with gold rules, mirroring the KSL document cover */}
+      <section className="bg-background">
+        <div className="container-tight py-10 md:py-16">
+          <div className="grid gap-4 md:grid-cols-12 md:gap-5">
+            <div className="md:col-span-12 bento-card-dark relative overflow-hidden md:p-16">
+              <p className="eyebrow text-[color:var(--gold)]">Nairobi · Juba · East Africa</p>
 
-            {/* Stat: years */}
-            <div className="md:col-span-4 bento-card flex flex-col justify-between">
-              <p className="eyebrow text-[color:var(--steel)]">Practice</p>
-              <div>
-                <p className="font-display text-6xl md:text-7xl">22<span className="text-[color:var(--steel)]">.</span></p>
-                <p className="mt-2 text-sm text-muted-foreground">Years delivering across East Africa</p>
-              </div>
-            </div>
+              <h1 className="mt-8 font-display text-5xl leading-[1.02] text-[color:var(--gold)] md:text-7xl">
+                The KSL GROUP
+              </h1>
 
-            {/* Stat: value managed */}
-            <div className="md:col-span-4 bento-card flex flex-col justify-between bg-[color:var(--cloud)]">
-              <p className="eyebrow text-[color:var(--primary)]">Under management</p>
-              <div>
-                <p className="font-display text-5xl md:text-6xl">$2.4B</p>
-                <p className="mt-2 text-sm text-muted-foreground">Construction value across 184 projects</p>
+              <div className="mt-6 border-t border-[color:var(--gold)]/40 pt-4">
+                <p className="font-display text-xl text-cloud md:text-2xl">
+                  The Kerbino Strategy &amp; Leadership Group Ltd.
+                </p>
+              </div>
+
+              <div className="mt-4 border-y border-[color:var(--gold)]/40 py-4">
+                <p className="font-display text-2xl italic text-[color:var(--gold)] md:text-3xl">
+                  Strategy Designed. Leaders Built.
+                </p>
+              </div>
+
+              <p className="mt-8 max-w-2xl text-base text-cloud/80 md:text-lg">
+                A specialist management consultancy bridging academic rigour and
+                practical application — for governments, institutions, and development
+                partners operating in complex, crisis-prone environments.
+              </p>
+
+              <div className="mt-10 flex flex-wrap gap-3">
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center gap-2 rounded-sm bg-[color:var(--gold)] px-6 py-3 text-sm font-semibold text-[color:var(--ink)] transition-colors hover:bg-cloud"
+                >
+                  Book a 60-min discovery call <ArrowUpRight className="h-4 w-4" />
+                </Link>
+                <Link
+                  to="/services"
+                  className="inline-flex items-center gap-2 rounded-sm border border-[color:var(--gold)]/40 px-6 py-3 text-sm font-medium text-cloud hover:bg-white/5"
+                >
+                  See our six service lines
+                </Link>
+              </div>
+
+              <div className="mt-14 grid grid-cols-3 gap-6 border-t border-[color:var(--gold)]/30 pt-8 text-cloud/85">
+                <PillarTag label="Governance" />
+                <PillarTag label="Crisis Leadership" />
+                <PillarTag label="Public Sector Strategy" />
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* THREE PILLARS — BENTO */}
-      <section className="py-20 md:py-28">
+      {/* WHO WE ARE */}
+      <section className="py-20 md:py-24">
+        <div className="container-tight">
+          <div className="grid gap-4 md:grid-cols-12 md:gap-5">
+            <div className="md:col-span-5">
+              <p className="eyebrow text-[color:var(--gold)]">/ Who we are</p>
+              <h2 className="mt-3 font-display text-4xl md:text-5xl">
+                A consultancy built for complex environments.
+              </h2>
+            </div>
+            <div className="md:col-span-7 bento-card md:p-10">
+              <p className="text-foreground/85 md:text-lg">
+                The KSL Group is headquartered in Nairobi, with operations across East
+                Africa and South Sudan. Founded by Kerbino Yel Deng — a Doctor of
+                Business Administration candidate at the Chandaria School of Business,
+                USIU-Africa — we deliver transformative results for public institutions,
+                private organisations, and development partners.
+              </p>
+              <p className="mt-4 italic text-foreground/70">
+                "Strategy without leadership is a plan without a driver — and leadership
+                without strategy is ambition without direction. KSL delivers both
+                simultaneously."
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SIX SERVICE LINES */}
+      <section className="border-t border-border bg-[color:var(--cloud)] py-20 md:py-28">
         <div className="container-tight">
           <div className="grid items-end gap-6 md:grid-cols-12">
             <div className="md:col-span-7">
-              <p className="eyebrow text-[color:var(--steel)]">/ What we do</p>
-              <h2 className="mt-3 font-display text-4xl md:text-5xl">Three disciplines.<br />One accountable team.</h2>
+              <p className="eyebrow text-[color:var(--gold)]">/ What we do</p>
+              <h2 className="mt-3 font-display text-4xl md:text-5xl">
+                Six service lines. One integrated practice.
+              </h2>
             </div>
             <p className="md:col-span-5 text-muted-foreground">
-              Partner-led delivery from feasibility to handover. Engage Meridian as a
-              full project office or a single specialist.
+              Each grounded in evidence-based methodology and tailored to the context,
+              capacity, and objectives of every client. Engage one — or all.
             </p>
           </div>
 
           <div className="mt-12 grid gap-4 md:grid-cols-6 md:gap-5">
-            <Pillar
-              span="md:col-span-3 lg:col-span-2"
-              icon={ClipboardList}
-              num="01"
-              title="Project Management"
-              body="Schedule, cost, scope, and risk under one accountable lead — from feasibility through handover."
-              bullets={["Critical-path schedule control", "Monthly cost & forecast reports", "Risk register & change management"]}
-            />
-            <Pillar
-              span="md:col-span-3 lg:col-span-2"
-              dark
-              icon={PackageSearch}
-              num="02"
-              title="Procurement"
-              body="Tender strategy, vendor qualification, and contract negotiation that protect the budget without slowing the build."
-              bullets={["Tender packaging & evaluation", "Cross-border sourcing", "GMP negotiation"]}
-            />
-            <Pillar
-              span="md:col-span-6 lg:col-span-2"
-              icon={HardHat}
-              num="03"
-              title="Construction Management"
-              body="Owner's representative on site — contractor coordination, safety governance, and QA through handover."
-              bullets={["Daily site supervision", "Safety & compliance audits", "Quality assurance"]}
-            />
+            <Pillar span="md:col-span-3 lg:col-span-2" icon={Compass} num="01"
+              title="Strategic Planning & Institutional Development"
+              body="Strategic frameworks and institutional systems that perform, adapt, and deliver — at scale and under pressure." />
+            <Pillar span="md:col-span-3 lg:col-span-2" dark icon={ShieldAlert} num="02"
+              title="Crisis Leadership Advisory"
+              body="DBA-level expertise in crisis leadership for fragile and conflict-affected settings — validated through original South Sudan research." />
+            <Pillar span="md:col-span-6 lg:col-span-2" icon={Users} num="03"
+              title="Executive Leadership Development"
+              body="One-to-one and cohort programmes that build leaders capable of delivering with integrity in complexity." />
+            <Pillar span="md:col-span-6 lg:col-span-2" dark icon={Landmark} num="04"
+              title="Governance, Accountability & Public Sector Reform"
+              body="Governance diagnostics, accountability frameworks, oversight capacity, and public financial management advisory." />
+            <Pillar span="md:col-span-3 lg:col-span-2" icon={FileSearch} num="05"
+              title="Research, Policy Analysis & Advisory"
+              body="Empirically grounded research, institutional evaluations, and policy briefs for governments, multilaterals, and NGOs." />
+            <Pillar span="md:col-span-3 lg:col-span-2" dark icon={GraduationCap} num="06"
+              title="Training, Facilitation & Workshop Design"
+              body="Custom workshops and training programmes that build internal capacity rather than create consultant dependency." />
+          </div>
+
+          <div className="mt-10 text-center">
+            <Link to="/services" className="inline-flex items-center gap-2 text-sm font-medium text-[color:var(--ink)]">
+              Full service detail <ArrowUpRight className="h-4 w-4" />
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* SECTORS / CLIENT STRIP */}
-      <section className="border-y border-border bg-background py-14">
+      {/* WHY KSL */}
+      <section className="py-20 md:py-28">
         <div className="container-tight">
-          <p className="eyebrow text-center text-muted-foreground">Sectors served across East Africa</p>
-          <ul className="mt-8 grid grid-cols-2 gap-y-6 text-center font-display text-xl text-foreground/70 md:grid-cols-6 md:text-2xl">
-            {["Commercial", "Civic", "Industrial", "Healthcare", "Hospitality", "Education"].map((s) => (
+          <p className="eyebrow text-[color:var(--gold)]">/ Why KSL</p>
+          <h2 className="mt-3 font-display text-4xl md:text-5xl">Our competitive edge.</h2>
+
+          <div className="mt-12 grid gap-4 md:grid-cols-12 md:gap-5">
+            <Edge span="md:col-span-6" n="I" title="Academic Depth"
+              body="DBA-level expertise in crisis leadership, governance, and strategic management — grounded in peer-reviewed research on public institutions in fragile settings." />
+            <Edge span="md:col-span-6" dark n="II" title="Contextual Intelligence"
+              body="Direct, on-the-ground experience of governance realities in South Sudan and East Africa. We do not apply generic frameworks to complex local environments." />
+            <Edge span="md:col-span-4" dark n="III" title="Practitioner Edge"
+              body="Scholarly rigour combined with hands-on implementation across public sector, civil society, and development-partner contexts." />
+            <Edge span="md:col-span-4" n="IV" title="Evidence-Based"
+              body="All recommendations grounded in empirical evidence, validated frameworks, and measurable outcome indicators — not opinion or convention." />
+            <Edge span="md:col-span-4" n="V" title="Long-Term Partnership"
+              body="We invest in sustained client relationships, building internal capacity rather than creating dependency on external consultants." />
+          </div>
+        </div>
+      </section>
+
+      {/* CLIENTS WE SERVE */}
+      <section className="border-y border-border bg-[color:var(--cloud)] py-16">
+        <div className="container-tight">
+          <p className="eyebrow text-center text-muted-foreground">Who we serve</p>
+          <ul className="mt-8 grid grid-cols-2 gap-y-6 text-center font-display text-lg text-foreground/75 md:grid-cols-5 md:text-xl">
+            {[
+              "Governments & Ministries",
+              "Oversight Institutions",
+              "UN & Multilaterals",
+              "Bilateral Donors & INGOs",
+              "Civil Society & Academia",
+            ].map((s) => (
               <li key={s} className="border-l border-border first:border-l-0 md:border-l">{s}</li>
             ))}
           </ul>
-        </div>
-      </section>
-
-      {/* WORK + PROOF BENTO */}
-      <section className="border-t border-border bg-[color:var(--cloud)] py-20 md:py-28">
-        <div className="container-tight">
-          <div className="flex items-end justify-between gap-6">
-            <div>
-              <p className="eyebrow text-[color:var(--primary)]">/ Selected work</p>
-              <h2 className="mt-3 font-display text-4xl md:text-5xl">Recent programs.</h2>
-            </div>
-            <Link to="/projects" className="hidden text-sm font-medium md:inline-flex">All projects →</Link>
-          </div>
-
-          <div className="mt-12 grid gap-4 md:grid-cols-12 md:gap-5">
-            <WorkCard className="md:col-span-7" img={project1} eyebrow="Civic infrastructure" title="Bayview Transit Interchange" meta="Owner's rep · $310M · 2024" />
-            <WorkCard className="md:col-span-5" img={project2} eyebrow="Commercial high-rise" title="One Harbour Plaza" meta="Pre-construction · 42 floors · 2023" />
-
-            {/* Testimonial tile */}
-            <figure className="md:col-span-5 bento-card-dark flex flex-col justify-between">
-              <p className="eyebrow text-cloud/60">Client</p>
-              <blockquote className="font-display text-2xl leading-snug">
-                "Meridian ran the program like it was their own balance sheet. We closed two months early."
-              </blockquote>
-              <figcaption className="text-sm">
-                <span className="font-medium text-cloud">M. Achieng</span>
-                <span className="block text-cloud/60">Director of Development, Tatu Holdings</span>
-              </figcaption>
-            </figure>
-
-            {/* KPI tile */}
-            <div className="md:col-span-3 bento-card flex flex-col justify-between">
-              <p className="eyebrow text-[color:var(--steel)]">On budget</p>
-              <p className="font-display text-6xl">97%</p>
-              <p className="text-sm text-muted-foreground">Delivery vs. approved budget</p>
-            </div>
-
-            {/* KPI tile */}
-            <div className="md:col-span-4 bento-card flex flex-col justify-between bg-[color:var(--ink)] text-cloud">
-              <p className="eyebrow text-cloud/60">Partner-led</p>
-              <p className="font-display text-4xl leading-tight">Every engagement is run by a named partner — not a junior bench.</p>
-              <Link to="/about" className="inline-flex items-center gap-1 text-sm text-cloud/80 hover:text-cloud">Meet the team <ArrowUpRight className="h-4 w-4" /></Link>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -173,19 +197,26 @@ function Home() {
       <section className="py-20 md:py-28">
         <div className="container-tight">
           <div className="grid gap-4 md:grid-cols-12 md:gap-5">
-            <div className="md:col-span-8 bento-card-dark md:p-10">
-              <p className="eyebrow text-cloud/60">/ Start here</p>
-              <h2 className="mt-4 font-display text-4xl md:text-5xl">Have a build that needs a steadier hand?</h2>
-              <p className="mt-4 max-w-xl text-cloud/70">A partner reviews every enquiry. Most are answered within one business day.</p>
-              <Link to="/contact" className="mt-8 inline-flex items-center gap-2 rounded-sm bg-cloud px-6 py-3 text-sm font-medium text-[color:var(--ink)] hover:bg-[color:var(--steel)] hover:text-cloud transition-colors">
-                Book a consultation <ArrowUpRight className="h-4 w-4" />
+            <div className="md:col-span-8 bento-card-dark md:p-12">
+              <p className="eyebrow text-[color:var(--gold)]">/ Partner with KSL</p>
+              <h2 className="mt-4 font-display text-4xl text-cloud md:text-5xl">
+                Let us design your organisation's next strategic chapter — and build the leaders to deliver it.
+              </h2>
+              <p className="mt-4 max-w-xl text-cloud/70">
+                Book a complimentary 60-minute discovery call with our Principal Consultant.
+              </p>
+              <Link
+                to="/contact"
+                className="mt-8 inline-flex items-center gap-2 rounded-sm bg-[color:var(--gold)] px-6 py-3 text-sm font-semibold text-[color:var(--ink)] hover:bg-cloud transition-colors"
+              >
+                Schedule a discovery call <ArrowUpRight className="h-4 w-4" />
               </Link>
             </div>
             <div className="md:col-span-4 bento-card flex flex-col gap-5">
-              <p className="eyebrow text-[color:var(--steel)]">Direct</p>
-              <ContactLine icon={Mail} text="kerbinoyel@gmail.com" />
-              <ContactLine icon={Phone} text="+254 743 978 678" />
-              <ContactLine icon={Phone} text="+211 927 272 752" />
+              <p className="eyebrow text-[color:var(--gold)]">Direct</p>
+              <ContactLine icon={Mail} text="info@kslgroup.co" />
+              <ContactLine icon={Phone} text="+254 743 978 678 · Kenya" />
+              <ContactLine icon={Phone} text="+211 927 272 752 · South Sudan" />
               <ContactLine icon={MapPin} text="Nairobi · Juba" />
             </div>
           </div>
@@ -195,51 +226,45 @@ function Home() {
   );
 }
 
+function PillarTag({ label }: { label: string }) {
+  return (
+    <div className="text-center">
+      <p className="font-display text-base text-[color:var(--gold)] md:text-lg">{label}</p>
+    </div>
+  );
+}
+
 function Pillar({
-  span, icon: Icon, num, title, body, bullets, dark,
-}: { span: string; icon: typeof ClipboardList; num: string; title: string; body: string; bullets: string[]; dark?: boolean }) {
+  span, icon: Icon, num, title, body, dark,
+}: { span: string; icon: typeof Compass; num: string; title: string; body: string; dark?: boolean }) {
   const base = dark ? "bento-card-dark" : "bento-card";
   return (
-    <article className={`${span} ${base} flex flex-col gap-6 md:p-8`}>
+    <article className={`${span} ${base} flex flex-col gap-5 md:p-8`}>
       <div className="flex items-start justify-between">
-        <Icon className="h-7 w-7" strokeWidth={1.5} />
-        <span className={`eyebrow ${dark ? "text-cloud/50" : "text-muted-foreground"}`}>{num}</span>
+        <Icon className={`h-7 w-7 ${dark ? "text-[color:var(--gold)]" : "text-[color:var(--ink)]"}`} strokeWidth={1.5} />
+        <span className={`eyebrow ${dark ? "text-[color:var(--gold)]" : "text-muted-foreground"}`}>{num}</span>
       </div>
-      <h3 className="font-display text-3xl">{title}</h3>
+      <h3 className={`font-display text-2xl leading-tight ${dark ? "text-cloud" : ""}`}>{title}</h3>
       <p className={`text-sm ${dark ? "text-cloud/75" : "text-muted-foreground"}`}>{body}</p>
-      <ul className="mt-auto space-y-2 text-sm">
-        {bullets.map((b) => (
-          <li key={b} className={`flex gap-2 border-t pt-2 ${dark ? "border-white/10" : "border-border"}`}>
-            <span className={dark ? "text-[color:var(--steel)]" : "text-[color:var(--steel)]"}>—</span>{b}
-          </li>
-        ))}
-      </ul>
     </article>
   );
 }
 
-function WorkCard({ className, img, eyebrow, title, meta }: { className?: string; img: string; eyebrow: string; title: string; meta: string }) {
+function Edge({ span, n, title, body, dark }: { span: string; n: string; title: string; body: string; dark?: boolean }) {
+  const base = dark ? "bento-card-dark" : "bento-card";
   return (
-    <Link to="/projects" className={`group block overflow-hidden rounded-sm border border-border bg-card ${className ?? ""}`}>
-      <div className="aspect-[16/10] overflow-hidden bg-muted">
-        <img src={img} alt={title} loading="lazy" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" />
-      </div>
-      <div className="flex items-start justify-between gap-6 p-6">
-        <div>
-          <p className="eyebrow text-[color:var(--steel)]">{eyebrow}</p>
-          <h3 className="mt-2 font-display text-2xl">{title}</h3>
-          <p className="mt-1 text-sm text-muted-foreground">{meta}</p>
-        </div>
-        <ArrowUpRight className="mt-2 h-5 w-5 shrink-0 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-      </div>
-    </Link>
+    <article className={`${span} ${base} md:p-8`}>
+      <p className={`font-display text-3xl ${dark ? "text-[color:var(--gold)]" : "text-[color:var(--gold)]"}`}>{n}</p>
+      <h3 className={`mt-3 font-display text-xl ${dark ? "text-cloud" : ""}`}>{title}</h3>
+      <p className={`mt-3 text-sm ${dark ? "text-cloud/75" : "text-muted-foreground"}`}>{body}</p>
+    </article>
   );
 }
 
 function ContactLine({ icon: Icon, text }: { icon: typeof Mail; text: string }) {
   return (
     <div className="flex items-center gap-3 text-sm">
-      <Icon className="h-4 w-4 text-[color:var(--steel)]" strokeWidth={1.5} />
+      <Icon className="h-4 w-4 text-[color:var(--gold)]" strokeWidth={1.5} />
       <span className="text-foreground/85">{text}</span>
     </div>
   );

@@ -5,9 +5,8 @@ import { Menu, X } from "lucide-react";
 const links = [
   { to: "/", label: "Home" },
   { to: "/services", label: "Services" },
-  { to: "/projects", label: "Projects" },
-  { to: "/insights", label: "Insights" },
   { to: "/about", label: "About" },
+  { to: "/insights", label: "Insights" },
   { to: "/contact", label: "Contact" },
 ] as const;
 
@@ -15,11 +14,12 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-border bg-background/85 backdrop-blur">
+    <header className="sticky top-0 z-40 border-b border-border bg-background/90 backdrop-blur">
       <div className="container-tight flex h-16 items-center justify-between">
-        <Link to="/" className="flex items-center gap-2 font-display text-lg font-semibold tracking-tight">
-          <span className="inline-block h-2.5 w-2.5 rotate-45 bg-accent" aria-hidden />
-          Meridian&nbsp;<span className="text-muted-foreground font-normal">Consulting</span>
+        <Link to="/" className="flex items-baseline gap-2 font-display text-lg tracking-tight">
+          <span className="font-display text-xl font-semibold text-[color:var(--ink)]">
+            The <span className="text-[color:var(--gold)]">KSL</span> Group
+          </span>
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
@@ -38,9 +38,9 @@ export function SiteHeader() {
 
         <Link
           to="/contact"
-          className="hidden rounded-sm bg-accent px-4 py-2 text-sm font-medium text-[color:var(--ink)] transition-colors hover:bg-primary hover:text-primary-foreground md:inline-flex"
+          className="hidden rounded-sm bg-[color:var(--gold)] px-4 py-2 text-sm font-semibold text-[color:var(--ink)] transition-colors hover:bg-[color:var(--ink)] hover:text-[color:var(--gold)] md:inline-flex"
         >
-          Book a consultation
+          Book a discovery call
         </Link>
 
         <button
