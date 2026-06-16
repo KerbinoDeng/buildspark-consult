@@ -58,13 +58,8 @@ export function SiteFooter() {
             <li>+211 927 272 752</li>
             <li>Nairobi · Juba</li>
             <li>
-              <a
-                href="https://www.linkedin.com/company/ksl-group"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-cloud"
-              >
-                LinkedIn ↗
+              <a href="mailto:info@kerbinogroup.com" className="hover:text-cloud">
+                info@kerbinogroup.com
               </a>
             </li>
           </ul>
