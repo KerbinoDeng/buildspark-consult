@@ -1,7 +1,26 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ArrowUpRight, Mail, MapPin, Phone, CheckCircle2 } from "lucide-react";
 import { useServerFn } from "@tanstack/react-start";
+
+const CALENDLY_URL = "https://calendly.com/kerbinoyel/30min";
+
+function CalendlyInline() {
+  useEffect(() => {
+    if (document.querySelector('script[src="https://assets.calendly.com/assets/external/widget.js"]')) return;
+    const s = document.createElement("script");
+    s.src = "https://assets.calendly.com/assets/external/widget.js";
+    s.async = true;
+    document.body.appendChild(s);
+  }, []);
+  return (
+    <div
+      className="calendly-inline-widget w-full"
+      data-url={`${CALENDLY_URL}?hide_gdpr_banner=1&primary_color=c9a24a`}
+      style={{ minWidth: 320, height: 720 }}
+    />
+  );
+}
 import { submitContact } from "@/lib/leads.functions";
 
 export const Route = createFileRoute("/contact")({
@@ -79,6 +98,30 @@ function ContactPage() {
         </div>
       </section>
 
+
+      {/* CALENDLY */}
+      <section className="border-b border-border py-16 md:py-20">
+        <div className="container-tight">
+          <div className="mb-8 flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
+            <div>
+              <p className="eyebrow text-[color:var(--gold)]">/ Schedule</p>
+              <h2 className="mt-2 font-display text-3xl md:text-4xl">Pick a time directly.</h2>
+              <p className="mt-2 max-w-xl text-sm text-muted-foreground">
+                Choose a 30-minute slot that works for you. You'll receive a calendar invite immediately.
+              </p>
+            </div>
+            <a
+              href={CALENDLY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-[color:var(--ink)] hover:text-[color:var(--gold)]"
+            >
+              Open in new tab <ArrowUpRight className="h-4 w-4" />
+            </a>
+          </div>
+          <CalendlyInline />
+        </div>
+      </section>
 
       {/* FORM */}
       <section className="py-16 md:py-24">
