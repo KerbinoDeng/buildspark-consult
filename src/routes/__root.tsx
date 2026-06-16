@@ -100,6 +100,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "stylesheet", href: appCss },
       { rel: "icon", type: "image/png", href: "/favicon.png" },
       { rel: "apple-touch-icon", href: "/favicon.png" },
+      { rel: "preconnect", href: "https://assets.calendly.com" },
+      { rel: "dns-prefetch", href: "https://calendly.com" },
     ],
   }),
   shellComponent: RootShell,

@@ -6,19 +6,35 @@ import { useServerFn } from "@tanstack/react-start";
 const CALENDLY_URL = "https://calendly.com/kerbinoyel/30min";
 
 function CalendlyInline() {
+  const [loaded, setLoaded] = useState(false);
   useEffect(() => {
-    if (document.querySelector('script[src="https://assets.calendly.com/assets/external/widget.js"]')) return;
+    const existing = document.querySelector<HTMLScriptElement>(
+      'script[src="https://assets.calendly.com/assets/external/widget.js"]'
+    );
+    if (existing) {
+      const t = setTimeout(() => setLoaded(true), 400);
+      return () => clearTimeout(t);
+    }
     const s = document.createElement("script");
     s.src = "https://assets.calendly.com/assets/external/widget.js";
     s.async = true;
+    s.onload = () => setTimeout(() => setLoaded(true), 400);
     document.body.appendChild(s);
   }, []);
   return (
-    <div
-      className="calendly-inline-widget w-full"
-      data-url={`${CALENDLY_URL}?hide_gdpr_banner=1&primary_color=c9a24a`}
-      style={{ minWidth: 320, height: 720 }}
-    />
+    <div className="relative w-full" style={{ minWidth: 320, height: 720 }}>
+      {!loaded && (
+        <div className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-3 rounded-sm border border-border bg-[color:var(--cloud)]">
+          <div className="h-8 w-8 animate-spin rounded-full border-2 border-[color:var(--gold)] border-t-transparent" />
+          <p className="text-sm text-muted-foreground">Loading available times…</p>
+        </div>
+      )}
+      <div
+        className="calendly-inline-widget h-full w-full"
+        data-url={`${CALENDLY_URL}?hide_gdpr_banner=1&primary_color=c9a24a`}
+        style={{ minWidth: 320, height: 720 }}
+      />
+    </div>
   );
 }
 import { submitContact } from "@/lib/leads.functions";
