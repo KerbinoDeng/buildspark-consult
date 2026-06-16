@@ -62,6 +62,16 @@ export function SiteFooter() {
                 info@kerbinogroup.com
               </a>
             </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/kerbino-yel-deng"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-cloud"
+              >
+                LinkedIn ↗
+              </a>
+            </li>
           </ul>
         </div>
 
