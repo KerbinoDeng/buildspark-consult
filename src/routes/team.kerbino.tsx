@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowUpRight, Mail, Phone, GraduationCap, BookOpen } from "lucide-react";
+import { ArrowUpRight, Mail, Phone, Linkedin, GraduationCap, BookOpen } from "lucide-react";
 
 export const Route = createFileRoute("/team/kerbino")({
   head: () => ({
