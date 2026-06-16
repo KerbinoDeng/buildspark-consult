@@ -99,6 +99,30 @@ function ContactPage() {
       </section>
 
 
+      {/* CALENDLY */}
+      <section className="border-b border-border py-16 md:py-20">
+        <div className="container-tight">
+          <div className="mb-8 flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
+            <div>
+              <p className="eyebrow text-[color:var(--gold)]">/ Schedule</p>
+              <h2 className="mt-2 font-display text-3xl md:text-4xl">Pick a time directly.</h2>
+              <p className="mt-2 max-w-xl text-sm text-muted-foreground">
+                Choose a 30-minute slot that works for you. You'll receive a calendar invite immediately.
+              </p>
+            </div>
+            <a
+              href={CALENDLY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-[color:var(--ink)] hover:text-[color:var(--gold)]"
+            >
+              Open in new tab <ArrowUpRight className="h-4 w-4" />
+            </a>
+          </div>
+          <CalendlyInline />
+        </div>
+      </section>
+
       {/* FORM */}
       <section className="py-16 md:py-24">
         <div className="container-tight">
