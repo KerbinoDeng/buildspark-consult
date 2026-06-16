@@ -12,9 +12,9 @@ import {
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Services — KSL Advisory" },
+      { title: "Services — Kerbino Group" },
       { name: "description", content: "Six service lines: strategic planning, crisis leadership, executive development, governance reform, policy research, and training & facilitation." },
-      { property: "og:title", content: "Services — KSL Advisory" },
+      { property: "og:title", content: "Services — Kerbino Group" },
       { property: "og:description", content: "Six integrated service lines for governments, institutions, and development partners across East Africa." },
       { property: "og:url", content: "https://buildspark-consult.lovable.app/services" },
     ],

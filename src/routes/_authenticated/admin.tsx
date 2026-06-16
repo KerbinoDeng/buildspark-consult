@@ -12,7 +12,7 @@ import { Button } from "@/components/ui/button";
 export const Route = createFileRoute("/_authenticated/admin")({
   head: () => ({
     meta: [
-      { title: "Admin — KSL Advisory" },
+      { title: "Admin — Kerbino Group" },
       { name: "robots", content: "noindex" },
     ],
   }),
@@ -101,7 +101,7 @@ function AdminPage() {
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
             <p className="eyebrow text-[color:var(--gold)]">/ Admin</p>
-            <h1 className="mt-2 font-display text-4xl">KSL dashboard</h1>
+            <h1 className="mt-2 font-display text-4xl">Kerbino Group dashboard</h1>
             <p className="mt-1 text-sm text-muted-foreground">
               {submissions.length} contact submission{submissions.length === 1 ? "" : "s"} ·{" "}
               {subscribers.length} newsletter subscriber{subscribers.length === 1 ? "" : "s"}
@@ -147,7 +147,7 @@ function AdminPage() {
                   <div className="mt-3 flex gap-3 text-xs">
                     <a
                       className="underline"
-                      href={`mailto:${s.email}?subject=Re: your enquiry to KSL Advisory`}
+                      href={`mailto:${s.email}?subject=Re: your enquiry to Kerbino Group`}
                     >
                       Reply by email
                     </a>

@@ -21,7 +21,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     challenge:
       "The ministry was preparing to absorb a major donor-funded portfolio but lacked an internal accountability framework that would satisfy oversight institutions and development partners simultaneously.",
     approach:
-      "KSL led a full governance diagnostic across procurement, HR, and programme management; mapped decision rights against statutory mandates; and designed a 9-month accountability roadmap with the senior leadership team.",
+      "Kerbino Group led a full governance diagnostic across procurement, HR, and programme management; mapped decision rights against statutory mandates; and designed a 9-month accountability roadmap with the senior leadership team.",
     outcomes: [
       "Adopted internal accountability charter signed by the Permanent Secretary",
       "12 specific control gaps closed within the engagement window",
@@ -37,7 +37,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     challenge:
       "A sudden change in country leadership combined with a security incident exposed weaknesses in the INGO's decision cadence during fast-moving crises.",
     approach:
-      "KSL ran a cohort programme for 14 country and regional directors built around the KSL Crisis Leadership Framework, paired each leader with a one-to-one advisor, and instituted a quarterly scenario-planning rhythm.",
+      "Kerbino Group ran a cohort programme for 14 country and regional directors built around the Kerbino Crisis Leadership Framework, paired each leader with a one-to-one advisor, and instituted a quarterly scenario-planning rhythm.",
     outcomes: [
       "Average decision-to-action time on critical incidents reduced by 47%",
       "Two formerly stalled country strategies signed off and funded",
@@ -53,7 +53,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     challenge:
       "The institution had a strong legal mandate but limited internal capacity to convert investigations into enforceable findings within statutory timelines.",
     approach:
-      "KSL embedded with the investigations directorate, redesigned the case-flow process, and ran an evidence-handling and report-writing training programme for 28 investigators and senior managers.",
+      "Kerbino Group embedded with the investigations directorate, redesigned the case-flow process, and ran an evidence-handling and report-writing training programme for 28 investigators and senior managers.",
     outcomes: [
       "Median time from case opening to published finding cut by 31%",
       "Backlog of pending investigations reduced from 84 to 19 cases",
@@ -65,12 +65,12 @@ export const CASE_STUDIES: CaseStudy[] = [
 export const TESTIMONIALS = [
   {
     quote:
-      "KSL helped us name the problem we already knew we had, and gave us a 90-day plan we could actually execute. Six months later, our leadership team is making decisions on a rhythm rather than in reaction.",
+      "Kerbino Group helped us name the problem we already knew we had, and gave us a 90-day plan we could actually execute. Six months later, our leadership team is making decisions on a rhythm rather than in reaction.",
     attribution: "Permanent Secretary, line ministry · South Sudan",
   },
   {
     quote:
-      "The combination of academic rigour and on-the-ground knowledge of how our institutions actually work is rare. We have used three consultancies on similar mandates — KSL is the one whose recommendations we still refer back to.",
+      "The combination of academic rigour and on-the-ground knowledge of how our institutions actually work is rare. We have used three consultancies on similar mandates — Kerbino Group is the one whose recommendations we still refer back to.",
     attribution: "Country Director, regional INGO · Nairobi",
   },
   {
@@ -182,7 +182,7 @@ export const SERVICES: ServiceDetail[] = [
     deliverables: [
       "Confidential principal-level advisory sessions",
       "Stakeholder and coalition mapping",
-      "Tailored application of the KSL Crisis Leadership Framework",
+      "Tailored application of the Kerbino Crisis Leadership Framework",
       "Post-engagement review with measurable indicators",
     ],
   },

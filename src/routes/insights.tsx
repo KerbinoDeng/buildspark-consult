@@ -8,9 +8,9 @@ import { ARTICLES } from "@/lib/content";
 export const Route = createFileRoute("/insights")({
   head: () => ({
     meta: [
-      { title: "Insights — KSL Advisory" },
-      { name: "description", content: "Research-grounded analysis on governance, crisis leadership, and public-sector reform from KSL Advisory." },
-      { property: "og:title", content: "Insights — KSL Advisory" },
+      { title: "Insights — Kerbino Group" },
+      { name: "description", content: "Research-grounded analysis on governance, crisis leadership, and public-sector reform from Kerbino Group." },
+      { property: "og:title", content: "Insights — Kerbino Group" },
       { property: "og:description", content: "Research notes on governance, crisis leadership, and institutional reform." },
     ],
   }),
@@ -42,7 +42,7 @@ function InsightsPage() {
           <div className="md:col-span-8">
             <p className="eyebrow text-[color:var(--gold)]">/ Free briefing</p>
             <h2 className="mt-3 font-display text-2xl md:text-3xl">
-              The KSL Crisis Leadership Framework — a practitioner's guide.
+              The Kerbino Crisis Leadership Framework — a practitioner's guide.
             </h2>
             <p className="mt-2 max-w-2xl text-sm text-muted-foreground">
               The four-pillar framework we use with senior leadership teams in fragile

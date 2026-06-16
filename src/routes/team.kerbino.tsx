@@ -4,13 +4,13 @@ import { ArrowUpRight, Mail, Linkedin, GraduationCap, BookOpen } from "lucide-re
 export const Route = createFileRoute("/team/kerbino")({
   head: () => ({
     meta: [
-      { title: "Dr. Kerbino Yel Deng — Founder, KSL Advisory" },
+      { title: "Dr. Kerbino Yel Deng — Founder, Kerbino Group" },
       {
         name: "description",
         content:
-          "Founder and Principal Consultant at KSL Advisory. DBA candidate in crisis leadership and governance, with advisory work across South Sudan and East Africa.",
+          "Founder and Principal Consultant at Kerbino Group. DBA candidate in crisis leadership and governance, with advisory work across South Sudan and East Africa.",
       },
-      { property: "og:title", content: "Dr. Kerbino Yel Deng — Founder, KSL Advisory" },
+      { property: "og:title", content: "Dr. Kerbino Yel Deng — Founder, Kerbino Group" },
       {
         property: "og:description",
         content:
@@ -36,7 +36,7 @@ function FounderPage() {
                 Founder &amp; CEO
               </p>
               <p className="mt-6 max-w-2xl text-cloud/80 md:text-lg">
-                Kerbino founded KSL Advisory to bridge what he saw as a persistent gap between
+                Kerbino founded Kerbino Group to bridge what he saw as a persistent gap between
                 rigorous academic work on institutions and the day-to-day practice of leading
                 them in complex, crisis-prone settings.
               </p>
@@ -119,7 +119,7 @@ function FounderPage() {
           </h2>
           <p className="mt-3 max-w-2xl text-cloud/75">
             Discovery calls are taken personally for the first conversation. Subsequent
-            engagements are scoped jointly and delivered by the KSL team.
+            engagements are scoped jointly and delivered by the Kerbino Group team.
           </p>
           <Link
             to="/contact"

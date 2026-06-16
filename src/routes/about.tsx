@@ -4,9 +4,9 @@ import { ArrowUpRight } from "lucide-react";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — KSL Advisory" },
-      { name: "description", content: "KSL Advisory — a specialist management consultancy in governance, crisis leadership, and public-sector strategy across East Africa." },
-      { property: "og:title", content: "About — KSL Advisory" },
+      { title: "About — Kerbino Group" },
+      { name: "description", content: "Kerbino Group — a specialist management consultancy in governance, crisis leadership, and public-sector strategy across East Africa." },
+      { property: "og:title", content: "About — Kerbino Group" },
       { property: "og:description", content: "Founded by Kerbino Yel Deng, DBA candidate at USIU-Africa. Strategy Designed. Leaders Built." },
       { property: "og:url", content: "https://buildspark-consult.lovable.app/about" },
     ],
@@ -37,7 +37,7 @@ function AboutPage() {
                 Strategy Designed.<br /><span className="text-[color:var(--gold)]">Leaders Built.</span>
               </h1>
               <p className="mt-6 max-w-xl text-cloud/80">
-                KSL Advisory is a specialist management
+                Kerbino Group is a specialist management
                 consultancy headquartered in Nairobi, with operations across East Africa
                 and South Sudan.
               </p>
@@ -100,7 +100,7 @@ function AboutPage() {
             </p>
             <p className="mt-4 text-foreground/85">
               His academic and professional career — combining DBA-level research with
-              hands-on regional practice — makes KSL Advisory uniquely positioned to serve
+              hands-on regional practice — makes Kerbino Group uniquely positioned to serve
               both institutional clients and development partners operating in complex
               environments.
             </p>
@@ -162,7 +162,7 @@ function AboutPage() {
         <div className="container-tight rule-top pt-16">
           <div className="grid items-end gap-8 md:grid-cols-12">
             <h2 className="md:col-span-8 font-display text-4xl md:text-5xl">
-              Partner with KSL Advisory.
+              Partner with Kerbino Group.
             </h2>
             <Link
               to="/contact"
