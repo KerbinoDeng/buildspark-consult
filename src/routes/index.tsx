@@ -243,7 +243,7 @@ function Home() {
             </div>
             <div className="md:col-span-4 bento-card flex flex-col gap-5">
               <p className="eyebrow text-[color:var(--gold)]">Direct</p>
-              <ContactLine icon={Mail} text="info@kslgroup.co" />
+              <ContactLine icon={Mail} text="info@kerbinogroup.com" />
               <ContactLine icon={Phone} text="+254 743 978 678 · Kenya" />
               <ContactLine icon={Phone} text="+211 927 272 752 · South Sudan" />
               <ContactLine icon={MapPin} text="Nairobi · Juba" />

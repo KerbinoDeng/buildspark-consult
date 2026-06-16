@@ -50,7 +50,7 @@ function InsightsPage() {
             </p>
             {state === "ok" && (
               <a
-                href="/ksl-crisis-leadership-framework.pdf"
+                href="/kerbino-crisis-leadership-framework.pdf"
                 download
                 className="mt-4 inline-flex items-center gap-2 rounded-sm bg-[color:var(--ink)] px-5 py-3 text-sm font-semibold text-[color:var(--gold)] hover:bg-[color:var(--gold)] hover:text-[color:var(--ink)]"
               >

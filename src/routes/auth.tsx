@@ -98,7 +98,7 @@ function AuthPage() {
           <form onSubmit={handleSubmit} className="space-y-3">
             <Input
               type="email"
-              placeholder="you@kslgroup.co"
+              placeholder="you@kerbinogroup.com"
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}

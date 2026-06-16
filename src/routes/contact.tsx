@@ -105,7 +105,7 @@ function ContactPage() {
             </div>
             <div className="md:col-span-4 bento-card space-y-5">
               <p className="eyebrow text-[color:var(--gold)]">Direct</p>
-              <Row icon={Mail} label="Email" value="info@kslgroup.co" />
+              <Row icon={Mail} label="Email" value="info@kerbinogroup.com" />
               <Row icon={Phone} label="Kenya" value="+254 743 978 678" />
               <Row icon={Phone} label="South Sudan" value="+211 927 272 752" />
               <Row icon={MapPin} label="Offices" value="Nairobi · Juba" />

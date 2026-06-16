@@ -20,7 +20,7 @@ function Terms() {
 
         <div className="mt-8 space-y-6 text-foreground/85">
           <Block title="1. Acceptance">
-            By accessing kslgroup.co or any Kerbino Group digital materials, you agree to these terms. If
+            By accessing kerbinogroup.com or any Kerbino Group digital materials, you agree to these terms. If
             you do not accept them, please do not use the site.
           </Block>
           <Block title="2. Informational use only">
@@ -48,7 +48,7 @@ function Terms() {
             subject to the exclusive jurisdiction of the Kenyan courts.
           </Block>
           <Block title="7. Contact">
-            Questions about these terms: <a className="underline" href="mailto:info@kslgroup.co">info@kslgroup.co</a>.
+            Questions about these terms: <a className="underline" href="mailto:info@kerbinogroup.com">info@kerbinogroup.com</a>.
           </Block>
         </div>
       </div>
