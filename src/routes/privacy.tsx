@@ -18,7 +18,7 @@ function Privacy() {
         <h1 className="mt-3 font-display text-4xl md:text-5xl">Privacy Policy</h1>
         <p className="mt-2 text-sm text-muted-foreground">Last updated: June 2026</p>
 
-        <div className="prose-ksl mt-8 space-y-6 text-foreground/85">
+        <div className="prose-kerbino mt-8 space-y-6 text-foreground/85">
           <Block title="1. Who we are">
             Kerbino Group ("Kerbino Group", "we", "our") is a
             specialist management consultancy registered in Kenya, with operations in Nairobi
