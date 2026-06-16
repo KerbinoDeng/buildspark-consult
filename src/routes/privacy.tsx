@@ -3,8 +3,8 @@ import { createFileRoute } from "@tanstack/react-router";
 export const Route = createFileRoute("/privacy")({
   head: () => ({
     meta: [
-      { title: "Privacy Policy — KSL Advisory" },
-      { name: "description", content: "How KSL Advisory collects, uses, and protects personal data." },
+      { title: "Privacy Policy — Kerbino Group" },
+      { name: "description", content: "How Kerbino Group collects, uses, and protects personal data." },
     ],
   }),
   component: Privacy,
@@ -20,7 +20,7 @@ function Privacy() {
 
         <div className="prose-ksl mt-8 space-y-6 text-foreground/85">
           <Block title="1. Who we are">
-            KSL Advisory ("KSL", "we", "our") is a
+            Kerbino Group ("Kerbino Group", "we", "our") is a
             specialist management consultancy registered in Kenya, with operations in Nairobi
             and Juba. For privacy enquiries, write to{" "}
             <a className="underline" href="mailto:info@kslgroup.co">info@kslgroup.co</a>.
@@ -36,7 +36,7 @@ function Privacy() {
 
           <Block title="3. Why we use it">
             Contact submissions are used to respond to your enquiry and, where appropriate, to
-            scope a possible engagement. Newsletter signups are used to send occasional KSL
+            scope a possible engagement. Newsletter signups are used to send occasional Kerbino Group
             insights and analysis. We do not sell your data or share it with advertisers.
           </Block>
 
@@ -48,7 +48,7 @@ function Privacy() {
 
           <Block title="5. How we store it">
             Data is held in our managed cloud database with row-level access controls. Only
-            approved KSL personnel can view contact submissions and subscriber lists.
+            approved Kerbino Group personnel can view contact submissions and subscriber lists.
           </Block>
 
           <Block title="6. Your rights">
@@ -60,7 +60,7 @@ function Privacy() {
 
           <Block title="7. Cookies">
             This website does not currently use third-party advertising cookies. Strictly
-            necessary cookies may be set to support sign-in to the KSL admin area.
+            necessary cookies may be set to support sign-in to the Kerbino Group admin area.
           </Block>
 
           <Block title="8. Changes">

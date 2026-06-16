@@ -86,13 +86,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "KSL Advisory — Strategy Designed. Leaders Built." },
-      { name: "description", content: "KSL Advisory — a specialist consultancy in governance, crisis leadership, and public-sector strategy across East Africa and South Sudan." },
-      { property: "og:title", content: "KSL Advisory — Strategy Designed. Leaders Built." },
+      { title: "Kerbino Group — Strategy Designed. Leaders Built." },
+      { name: "description", content: "Kerbino Group — a specialist consultancy in governance, crisis leadership, and public-sector strategy across East Africa and South Sudan." },
+      { property: "og:title", content: "Kerbino Group — Strategy Designed. Leaders Built." },
       { property: "og:description", content: "Specialist consultancy in governance, crisis leadership, and public-sector strategy across East Africa." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "KSL Advisory — Strategy Designed. Leaders Built." },
+      { name: "twitter:title", content: "Kerbino Group — Strategy Designed. Leaders Built." },
       { name: "twitter:description", content: "Specialist consultancy in governance, crisis leadership, and public-sector strategy across East Africa." },
     ],
 

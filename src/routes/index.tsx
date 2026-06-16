@@ -17,9 +17,9 @@ import { TESTIMONIALS } from "@/lib/content";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "KSL Advisory — Strategy Designed. Leaders Built." },
-      { name: "description", content: "KSL Advisory — specialist consultancy in governance, crisis leadership, and public-sector strategy across East Africa and South Sudan." },
-      { property: "og:title", content: "KSL Advisory" },
+      { title: "Kerbino Group — Strategy Designed. Leaders Built." },
+      { name: "description", content: "Kerbino Group — specialist consultancy in governance, crisis leadership, and public-sector strategy across East Africa and South Sudan." },
+      { property: "og:title", content: "Kerbino Group" },
       { property: "og:description", content: "Strategy Designed. Leaders Built. Governance · Crisis Leadership · Public-Sector Strategy." },
     ],
   }),
@@ -29,7 +29,7 @@ export const Route = createFileRoute("/")({
 function Home() {
   return (
     <>
-      {/* HERO — cover-style navy panel with gold rules, mirroring the KSL document cover */}
+      {/* HERO — cover-style navy panel with gold rules, mirroring the Kerbino Group document cover */}
       <section className="bg-background">
         <div className="container-tight py-10 md:py-16">
           <div className="grid gap-4 md:grid-cols-12 md:gap-5">
@@ -37,12 +37,12 @@ function Home() {
               <p className="eyebrow text-[color:var(--gold)]">Nairobi · Juba · East Africa</p>
 
               <h1 className="mt-8 font-display text-5xl leading-[1.02] text-[color:var(--gold)] md:text-7xl">
-                KSL ADVISORY
+                Kerbino Group ADVISORY
               </h1>
 
               <div className="mt-6 border-t border-[color:var(--gold)]/40 pt-4">
                 <p className="font-display text-xl text-cloud md:text-2xl">
-                  KSL Advisory
+                  Kerbino Group
                 </p>
               </div>
 
@@ -95,7 +95,7 @@ function Home() {
             </div>
             <div className="md:col-span-7 bento-card md:p-10">
               <p className="text-foreground/85 md:text-lg">
-                KSL Advisory is headquartered in Nairobi, with operations across East
+                Kerbino Group is headquartered in Nairobi, with operations across East
                 Africa and South Sudan. Founded by Kerbino Yel Deng — a Doctor of
                 Business Administration candidate at the Chandaria School of Business,
                 USIU-Africa — we deliver transformative results for public institutions,
@@ -103,7 +103,7 @@ function Home() {
               </p>
               <p className="mt-4 italic text-foreground/70">
                 "Strategy without leadership is a plan without a driver — and leadership
-                without strategy is ambition without direction. KSL delivers both
+                without strategy is ambition without direction. Kerbino Group delivers both
                 simultaneously."
               </p>
             </div>
@@ -156,10 +156,10 @@ function Home() {
         </div>
       </section>
 
-      {/* WHY KSL */}
+      {/* WHY Kerbino Group */}
       <section className="py-20 md:py-28">
         <div className="container-tight">
-          <p className="eyebrow text-[color:var(--gold)]">/ Why KSL</p>
+          <p className="eyebrow text-[color:var(--gold)]">/ Why Kerbino Group</p>
           <h2 className="mt-3 font-display text-4xl md:text-5xl">Our competitive edge.</h2>
 
           <div className="mt-12 grid gap-4 md:grid-cols-12 md:gap-5">
@@ -227,7 +227,7 @@ function Home() {
         <div className="container-tight">
           <div className="grid gap-4 md:grid-cols-12 md:gap-5">
             <div className="md:col-span-8 bento-card-dark md:p-12">
-              <p className="eyebrow text-[color:var(--gold)]">/ Partner with KSL</p>
+              <p className="eyebrow text-[color:var(--gold)]">/ Partner with Kerbino Group</p>
               <h2 className="mt-4 font-display text-4xl text-cloud md:text-5xl">
                 Let us design your organisation's next strategic chapter — and build the leaders to deliver it.
               </h2>

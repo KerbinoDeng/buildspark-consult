@@ -8,7 +8,7 @@ import { Input } from "@/components/ui/input";
 export const Route = createFileRoute("/auth")({
   head: () => ({
     meta: [
-      { title: "Sign in — KSL Advisory" },
+      { title: "Sign in — Kerbino Group" },
       { name: "robots", content: "noindex" },
     ],
   }),
@@ -71,12 +71,12 @@ function AuthPage() {
     <section className="py-16 md:py-24">
       <div className="container-tight max-w-md">
         <div className="bento-card md:p-10">
-          <p className="eyebrow text-[color:var(--gold)]">/ KSL admin</p>
+          <p className="eyebrow text-[color:var(--gold)]">/ Kerbino Group admin</p>
           <h1 className="mt-3 font-display text-3xl md:text-4xl">
             {mode === "signin" ? "Sign in" : "Create account"}
           </h1>
           <p className="mt-2 text-sm text-muted-foreground">
-            Restricted area. Only approved KSL team members can access the dashboard.
+            Restricted area. Only approved Kerbino Group team members can access the dashboard.
           </p>
 
           <Button

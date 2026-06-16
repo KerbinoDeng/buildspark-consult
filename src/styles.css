@@ -48,10 +48,10 @@
 :root {
   --radius: 0.25rem;
 
-  /* KSL Navy + Gold palette */
+  /* Kerbino Group Navy + Gold palette */
   --ink: oklch(0.21 0.08 268);          /* #1a2657 deep navy */
   --primary: oklch(0.28 0.10 266);      /* navy */
-  --steel: oklch(0.78 0.14 84);         /* #d4a437 KSL gold */
+  --steel: oklch(0.78 0.14 84);         /* #d4a437 Kerbino Group gold */
   --gold: oklch(0.78 0.14 84);
   --gold-soft: oklch(0.88 0.09 88);
   --cloud: oklch(0.96 0.01 90);         /* warm ivory */

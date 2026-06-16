@@ -42,10 +42,10 @@ import { submitContact } from "@/lib/leads.functions";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — KSL Advisory" },
-      { name: "description", content: "Book a complimentary 60-minute discovery call with KSL Advisory's Principal Consultant. Most enquiries answered within one business day." },
-      { property: "og:title", content: "Contact — KSL Advisory" },
-      { property: "og:description", content: "Book a discovery call with KSL Advisory." },
+      { title: "Contact — Kerbino Group" },
+      { name: "description", content: "Book a complimentary 60-minute discovery call with Kerbino Group's Principal Consultant. Most enquiries answered within one business day." },
+      { property: "og:title", content: "Contact — Kerbino Group" },
+      { property: "og:description", content: "Book a discovery call with Kerbino Group." },
       { property: "og:url", content: "https://buildspark-consult.lovable.app/contact" },
     ],
     links: [{ rel: "canonical", href: "https://buildspark-consult.lovable.app/contact" }],

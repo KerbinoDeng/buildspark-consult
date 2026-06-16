@@ -3,8 +3,8 @@ import { createFileRoute } from "@tanstack/react-router";
 export const Route = createFileRoute("/terms")({
   head: () => ({
     meta: [
-      { title: "Terms of Use — KSL Advisory" },
-      { name: "description", content: "Terms governing use of the KSL Advisory website and digital materials." },
+      { title: "Terms of Use — Kerbino Group" },
+      { name: "description", content: "Terms governing use of the Kerbino Group website and digital materials." },
     ],
   }),
   component: Terms,
@@ -20,7 +20,7 @@ function Terms() {
 
         <div className="mt-8 space-y-6 text-foreground/85">
           <Block title="1. Acceptance">
-            By accessing kslgroup.co or any KSL digital materials, you agree to these terms. If
+            By accessing kslgroup.co or any Kerbino Group digital materials, you agree to these terms. If
             you do not accept them, please do not use the site.
           </Block>
           <Block title="2. Informational use only">
@@ -30,8 +30,8 @@ function Terms() {
             substitute for a formal engagement.
           </Block>
           <Block title="3. Intellectual property">
-            All site content is owned by KSL Advisory or
-            licensed to it. The KSL name and the KSL Crisis Leadership Framework are
+            All site content is owned by Kerbino Group or
+            licensed to it. The Kerbino Group name and the Kerbino Crisis Leadership Framework are
             proprietary. You may share and quote our public materials with attribution; you may
             not republish them in full without written permission.
           </Block>
@@ -40,7 +40,7 @@ function Terms() {
             regarding uptime, accuracy, or fitness for a particular purpose.
           </Block>
           <Block title="5. Limitation of liability">
-            To the maximum extent permitted by law, KSL is not liable for indirect,
+            To the maximum extent permitted by law, Kerbino Group is not liable for indirect,
             incidental, or consequential damages arising from use of the site.
           </Block>
           <Block title="6. Governing law">
