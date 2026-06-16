@@ -1,7 +1,26 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ArrowUpRight, Mail, MapPin, Phone, CheckCircle2 } from "lucide-react";
 import { useServerFn } from "@tanstack/react-start";
+
+const CALENDLY_URL = "https://calendly.com/kerbinoyel/30min";
+
+function CalendlyInline() {
+  useEffect(() => {
+    if (document.querySelector('script[src="https://assets.calendly.com/assets/external/widget.js"]')) return;
+    const s = document.createElement("script");
+    s.src = "https://assets.calendly.com/assets/external/widget.js";
+    s.async = true;
+    document.body.appendChild(s);
+  }, []);
+  return (
+    <div
+      className="calendly-inline-widget w-full"
+      data-url={`${CALENDLY_URL}?hide_gdpr_banner=1&primary_color=c9a24a`}
+      style={{ minWidth: 320, height: 720 }}
+    />
+  );
+}
 import { submitContact } from "@/lib/leads.functions";
 
 export const Route = createFileRoute("/contact")({
