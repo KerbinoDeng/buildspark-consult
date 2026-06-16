@@ -53,7 +53,7 @@ export function SiteFooter() {
         <div>
           <p className="eyebrow text-cloud/50">Contact</p>
           <ul className="mt-4 space-y-2 text-sm text-cloud/80">
-            <li>info@kslgroup.co</li>
+            <li>info@kerbinogroup.com</li>
             <li>+254 743 978 678</li>
             <li>+211 927 272 752</li>
             <li>Nairobi · Juba</li>

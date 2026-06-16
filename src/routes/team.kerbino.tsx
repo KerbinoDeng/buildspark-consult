@@ -42,7 +42,7 @@ function FounderPage() {
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <a
-                  href="mailto:kerbino@kslgroup.co"
+                  href="mailto:kerbino@kerbinogroup.com"
                   className="inline-flex items-center gap-2 rounded-sm bg-[color:var(--gold)] px-5 py-3 text-sm font-semibold text-[color:var(--ink)] hover:bg-cloud"
                 >
                   <Mail className="h-4 w-4" /> Email Kerbino
@@ -60,7 +60,7 @@ function FounderPage() {
               <p className="eyebrow text-[color:var(--gold)]">At a glance</p>
               <Fact icon={GraduationCap} label="Doctoral candidate" value="DBA, Chandaria School of Business, USIU-Africa" />
               <Fact icon={BookOpen} label="Research focus" value="Crisis leadership & public-sector delivery in fragile states" />
-              <Fact icon={Mail} label="Direct" value="kerbino@kslgroup.co" />
+              <Fact icon={Mail} label="Direct" value="kerbino@kerbinogroup.com" />
               <Fact icon={Linkedin} label="LinkedIn" value="On request" />
             </aside>
           </div>

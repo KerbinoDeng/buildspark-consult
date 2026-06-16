@@ -23,7 +23,7 @@ function Privacy() {
             Kerbino Group ("Kerbino Group", "we", "our") is a
             specialist management consultancy registered in Kenya, with operations in Nairobi
             and Juba. For privacy enquiries, write to{" "}
-            <a className="underline" href="mailto:info@kslgroup.co">info@kslgroup.co</a>.
+            <a className="underline" href="mailto:info@kerbinogroup.com">info@kerbinogroup.com</a>.
           </Block>
 
           <Block title="2. What we collect">
@@ -54,7 +54,7 @@ function Privacy() {
           <Block title="6. Your rights">
             You can request a copy of the personal data we hold on you, ask us to correct or
             delete it, or unsubscribe from communications at any time. Send requests to{" "}
-            <a className="underline" href="mailto:info@kslgroup.co">info@kslgroup.co</a> and we
+            <a className="underline" href="mailto:info@kerbinogroup.com">info@kerbinogroup.com</a> and we
             will respond within 30 days.
           </Block>
 
