@@ -37,7 +37,7 @@ function Home() {
               <p className="eyebrow text-[color:var(--gold)]">Nairobi · Juba · East Africa</p>
 
               <h1 className="mt-8 font-display text-5xl leading-[1.02] text-[color:var(--gold)] md:text-7xl">
-                Kerbino Group ADVISORY
+                KERBINO GROUP
               </h1>
 
               <div className="mt-6 border-t border-[color:var(--gold)]/40 pt-4">
