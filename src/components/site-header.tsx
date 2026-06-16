@@ -18,7 +18,7 @@ export function SiteHeader() {
       <div className="container-tight flex h-16 items-center justify-between">
         <Link to="/" className="flex items-baseline gap-2 font-display text-lg tracking-tight">
           <span className="font-display text-xl font-semibold text-[color:var(--ink)]">
-            <span className="text-[color:var(--gold)]">Kerbino Group</span> Advisory
+            <span className="text-[color:var(--gold)]">Kerbino</span> Group
           </span>
         </Link>
 

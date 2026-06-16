@@ -26,7 +26,7 @@ export function SiteFooter() {
       <div className="container-tight grid gap-12 py-16 md:grid-cols-[1.5fr_1fr_1fr_1.2fr]">
         <div>
           <div className="font-display text-xl">
-            The <span className="text-[color:var(--gold)]">Kerbino Group</span> Group
+            <span className="text-[color:var(--gold)]">Kerbino</span> Group
           </div>
           <p className="mt-3 text-xs uppercase tracking-[0.18em] text-[color:var(--gold)]">
             Strategy Designed. Leaders Built.
@@ -98,7 +98,7 @@ export function SiteFooter() {
 
       <div className="border-t border-white/10">
         <div className="container-tight flex flex-col items-start justify-between gap-2 py-6 text-xs text-cloud/50 md:flex-row md:items-center">
-          <p>© {new Date().getFullYear()} Kerbino Group All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Kerbino Group. All rights reserved.</p>
           <div className="flex flex-wrap gap-4">
             <Link to="/privacy" className="hover:text-cloud">Privacy</Link>
             <Link to="/terms" className="hover:text-cloud">Terms</Link>
