@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowUpRight, Mail, Linkedin, GraduationCap, BookOpen } from "lucide-react";
+import { ArrowUpRight, Mail, Phone, GraduationCap, BookOpen } from "lucide-react";
 
 export const Route = createFileRoute("/team/kerbino")({
   head: () => ({
@@ -61,7 +61,8 @@ function FounderPage() {
               <Fact icon={GraduationCap} label="Doctoral candidate" value="DBA, Chandaria School of Business, USIU-Africa" />
               <Fact icon={BookOpen} label="Research focus" value="Crisis leadership & public-sector delivery in fragile states" />
               <Fact icon={Mail} label="Direct" value="kerbino@kerbinogroup.com" />
-              <Fact icon={Linkedin} label="LinkedIn" value="On request" />
+              <Fact icon={Phone} label="Kenya" value="+254 743 978 678" />
+              <Fact icon={Phone} label="South Sudan" value="+211 927 272 752" />
             </aside>
           </div>
         </div>
