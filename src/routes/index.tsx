@@ -50,6 +50,9 @@ function Home() {
                 <p className="font-display text-2xl italic text-[color:var(--gold)] md:text-3xl">
                   Strategy Designed. Leaders Built.
                 </p>
+                <p className="mt-2 text-sm uppercase tracking-[0.2em] text-cloud/80 md:text-base">
+                  Multidisciplinary research expertise across every field.
+                </p>
               </div>
 
               <p className="mt-8 max-w-2xl text-base text-cloud/80 md:text-lg">
